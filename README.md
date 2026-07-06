@@ -9,6 +9,7 @@ to clients.
 ## Demos
 
 - Wilson's Custom Creations
+- Brewers Creative Designs
 - Shelby's Sweet & Scorched
 - Swack & Co. Barber Shop
 - Curry Construction
