@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cupful of Grace Coffee | Online Orders</title>
+    <meta
+      name="description"
+      content="Cupful of Grace Coffee demo website with online drink ordering, event updates, and future merchandise."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,800&family=Inter:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header" id="top">
+      <a class="brand" href="#top" aria-label="Cupful of Grace Coffee home">
+        <span class="brand-mark">CG</span>
+        <span>
+          <strong>Cupful of Grace Coffee</strong>
+          <small>Fueled by faith, grace, and caffeine</small>
+        </span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="#order">Order</a>
+        <a href="#menu">Menu</a>
+        <a href="#events">Events</a>
+        <a href="#merch">Merch</a>
+      </nav>
+      <a class="icon-button header-order" href="#order" aria-label="Start an order">
+        <i data-lucide="shopping-bag"></i>
+        <span>Order</span>
+      </a>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Coffee trailer serving local favorites</p>
+          <h1 id="hero-title">Cupful of Grace Coffee</h1>
+          <p>
+            A mobile coffee and dirty drink trailer pouring local favorite lattes,
+            Alani energy sips, lemonades, hot chocolate, and fresh bakery treats
+            around Fayetteville and nearby markets.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-action" href="#order">
+              <i data-lucide="cup-soda"></i>
+              <span>Order ahead</span>
+            </a>
+            <a class="secondary-action" href="#events">
+              <i data-lucide="map-pin"></i>
+              <span>Find the trailer</span>
+            </a>
+          </div>
+          <dl class="social-proof">
+            <div>
+              <dt>2.5K</dt>
+              <dd>followers</dd>
+            </div>
+            <div>
+              <dt>Mobile</dt>
+              <dd>coffee shop</dd>
+            </div>
+            <div>
+              <dt>$6</dt>
+              <dd>local favorites</dd>
+            </div>
+          </dl>
+        </div>
+
+        <aside class="quick-order" id="order" aria-labelledby="order-title">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">Online order</p>
+              <h2 id="order-title">Build your pickup order</h2>
+            </div>
+            <span class="status-pill">Demo cart</span>
+          </div>
+
+          <div class="pickup-row">
+            <label for="pickup-time">Pickup time</label>
+            <select id="pickup-time">
+              <option>ASAP - next stop</option>
+              <option>10:15 AM</option>
+              <option>10:30 AM</option>
+              <option>10:45 AM</option>
+              <option>11:00 AM</option>
+            </select>
+          </div>
+
+          <div class="customer-row">
+            <label for="customer-name">Name for pickup</label>
+            <input id="customer-name" type="text" placeholder="Your name" />
+          </div>
+
+          <div class="featured-order" data-featured>
+            <div>
+              <strong>Candy Cloud</strong>
+              <span>Alani, raspberry, strawberry, and cold foam</span>
+            </div>
+            <button class="round-icon" type="button" data-add="candy-cloud" aria-label="Add Candy Cloud">
+              <i data-lucide="plus"></i>
+            </button>
+          </div>
+
+          <div class="cart-box" aria-live="polite">
+            <div class="cart-title">
+              <strong>Your order</strong>
+              <button type="button" class="text-button" data-clear>Clear</button>
+            </div>
+            <ul class="cart-items" data-cart-items>
+              <li class="empty-cart">No items yet</li>
+            </ul>
+            <div class="cart-total">
+              <span>Total</span>
+              <strong data-cart-total>$0.00</strong>
+            </div>
+            <button class="checkout-button" type="button" data-checkout>
+              <i data-lucide="send"></i>
+              <span>Preview order text</span>
+            </button>
+          </div>
+        </aside>
+      </section>
+
+      <section class="photo-strip" aria-label="Cupful of Grace Coffee photos">
+        <img src="assets/facebook-photo-board.png" alt="Cupful of Grace Coffee drinks, trailer, menus, and baked goods" />
+        <div class="strip-note">
+          <strong>From the trailer window</strong>
+          <span>Dirty drinks, iced coffee, sweets, and event days.</span>
+        </div>
+      </section>
+
+      <section class="section-shell menu-shell" id="menu" aria-labelledby="menu-title">
+        <div class="section-heading">
+          <p class="eyebrow">Menu</p>
+          <h2 id="menu-title">Local favorites and signature sips</h2>
+          <p>
+            Menu structure mirrors their Facebook boards: iced local favorites at
+            $6, frozen options at $6.50, dirty sodas at $6.50, and dirty energy
+            drinks at $7.50.
+          </p>
+        </div>
+        <div class="filter-bar" role="tablist" aria-label="Menu categories">
+          <button type="button" class="filter active" data-filter="all">All</button>
+          <button type="button" class="filter" data-filter="coffee">Coffee</button>
+          <button type="button" class="filter" data-filter="dirty">Dirty drinks</button>
+          <button type="button" class="filter" data-filter="beyond">Beyond coffee</button>
+          <button type="button" class="filter" data-filter="bakery">Bakery</button>
+        </div>
+        <div class="menu-grid" data-menu-grid></div>
+      </section>
+
+      <section class="order-preview section-shell" aria-labelledby="request-title">
+        <div class="section-heading">
+          <p class="eyebrow">How ordering can work</p>
+          <h2 id="request-title">A simple request flow before full checkout</h2>
+          <p>
+            This keeps launch practical: customers build an order, preview the
+            message, then the owner can receive it by form, text, Square, Toast,
+            or Facebook Messenger when the final platform is chosen.
+          </p>
+        </div>
+        <div class="request-grid">
+          <article>
+            <i data-lucide="cup-soda"></i>
+            <strong>Choose drinks</strong>
+            <span>Coffee, dirty soda, dirty energy, lemonade, hot chocolate, or bakery.</span>
+          </article>
+          <article>
+            <i data-lucide="clock"></i>
+            <strong>Pick a window</strong>
+            <span>ASAP or an event pickup time from the trailer schedule.</span>
+          </article>
+          <article>
+            <i data-lucide="message-square-text"></i>
+            <strong>Send request</strong>
+            <span>Owner confirms availability and total before payment.</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="split-band" id="events" aria-labelledby="events-title">
+        <div>
+          <p class="eyebrow">Where to find us</p>
+          <h2 id="events-title">Markets, fundraisers, and trailer days</h2>
+          <p>
+            The Facebook page highlights vendor events like the Summer Makers
+            Market at Dragonfly Village, 20860 OH-251, Fayetteville, OH. This
+            section gives customers a direct place to check where the trailer
+            will be next.
+          </p>
+          <a class="secondary-action dark" href="https://www.facebook.com/profile.php?id=61579149267662" target="_blank" rel="noreferrer">
+            <i data-lucide="facebook"></i>
+            <span>Message on Facebook</span>
+          </a>
+        </div>
+        <div class="event-list" aria-label="Event options">
+          <article>
+            <i data-lucide="calendar-heart"></i>
+            <strong>Vendor markets</strong>
+            <span>Menu boards, quick pickup orders, and rotating event specials.</span>
+          </article>
+          <article>
+            <i data-lucide="party-popper"></i>
+            <strong>Private events</strong>
+            <span>Custom drink lists for graduations, showers, church events, and family celebrations.</span>
+          </article>
+          <article>
+            <i data-lucide="hand-heart"></i>
+            <strong>Fundraisers</strong>
+            <span>Faith-forward service with drinks people already follow online.</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-shell merch-shell" id="merch" aria-labelledby="merch-title">
+        <div class="section-heading">
+          <p class="eyebrow">Coming next</p>
+          <h2 id="merch-title">Merchandise shelf</h2>
+          <p>Branded cups, tees, stickers, and seasonal bundles can drop into this shop area when the client is ready.</p>
+        </div>
+        <div class="merch-grid">
+          <article>
+            <span class="merch-art cup-art"></span>
+            <strong>Logo tumbler</strong>
+            <small>Coming soon</small>
+          </article>
+          <article>
+            <span class="merch-art tee-art"></span>
+            <strong>Coffee and Jesus tee</strong>
+            <small>Coming soon</small>
+          </article>
+          <article>
+            <span class="merch-art sticker-art"></span>
+            <strong>Sticker pack</strong>
+            <small>Coming soon</small>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <div class="toast" data-toast role="status" aria-live="polite"></div>
+  </body>
+</html>
