@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Wilson's Custom Creations | Online Orders</title>
+    <meta
+      name="description"
+      content="Order custom engraved signs, patches, hats, board games, ornaments, pendants, and event displays from Wilson's Custom Creations."
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23211a15'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-family='Georgia' font-size='34' font-weight='700' fill='%23fff8ed'%3EW%3C/text%3E%3C/svg%3E"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Libre+Baskerville:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Wilson's Custom Creations home">
+        <span class="brand-mark">W</span>
+        <span>
+          <strong>Wilson's</strong>
+          <small>Custom Creations</small>
+        </span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="#shop">Shop</a>
+        <a href="#customize">Custom Orders</a>
+        <a href="#gallery">Gallery</a>
+      </nav>
+      <button class="cart-button" type="button" data-cart-open>
+        <span>Cart</span>
+        <strong data-cart-count>0</strong>
+      </button>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-media">
+          <img src="assets/friendly-acres-sign.jpg" alt="Large engraved Friendly Acres wood sign" />
+        </div>
+        <div class="hero-copy">
+          <p class="eyebrow">Laser engraving, leather patches, signs, gifts, and event pieces</p>
+          <h1 id="hero-title">Wilson's Custom Creations</h1>
+          <p>
+            Personalized pieces made to order, from hat patches and ornaments to solid brass
+            pendants, custom signs, board games, and wedding displays.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#shop">Start an order</a>
+            <a class="button secondary" href="tel:+19376815665">Call 937.681.5665</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="quick-strip" aria-label="Ordering highlights">
+        <div>
+          <strong>7</strong>
+          <span>made-to-order product lines</span>
+        </div>
+        <div>
+          <strong>$12+</strong>
+          <span>entry price for custom patches</span>
+        </div>
+        <div>
+          <strong>Local</strong>
+          <span>pickup, shipping, and event orders</span>
+        </div>
+      </section>
+
+      <section class="section" id="shop" aria-labelledby="shop-title">
+        <div class="section-heading">
+          <p class="eyebrow">Order online</p>
+          <h2 id="shop-title">Choose a product, then personalize it</h2>
+        </div>
+        <div class="product-grid" data-products></div>
+      </section>
+
+      <section class="split-section" id="customize" aria-labelledby="customize-title">
+        <div>
+          <p class="eyebrow">Built for custom work</p>
+          <h2 id="customize-title">Every order collects the details Wilson needs up front.</h2>
+        </div>
+        <div class="feature-list">
+          <div>
+            <strong>Names and wording</strong>
+            <span>Add engraving text, patch wording, initials, dates, or family names.</span>
+          </div>
+          <div>
+            <strong>Material and finish</strong>
+            <span>Pick wood tone, leather color, brass, silver metal, or holiday ornament color.</span>
+          </div>
+          <div>
+            <strong>Order notes</strong>
+            <span>Upload-ready notes for dimensions, logo ideas, event dates, or pickup timing.</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section gallery-section" id="gallery" aria-labelledby="gallery-title">
+        <div class="section-heading">
+          <p class="eyebrow">Recent work</p>
+          <h2 id="gallery-title">Use the photos customers already recognize</h2>
+        </div>
+        <div class="gallery-grid">
+          <img src="assets/beanie-patch.jpg" alt="Gray beanie with Barn and Cabin Friend patch" />
+          <img src="assets/dairy-barn-patch.jpg" alt="Leesburg Dairy Barn custom leather patch" />
+          <img src="assets/richardson-hat-patch.jpg" alt="Richardson hat with custom leather flag patch" />
+          <img src="assets/pet-hook-boards.jpg" alt="Personalized pet leash hook boards" />
+          <img src="assets/xmas-ornaments.jpg" alt="Red personalized Christmas ornaments" />
+          <img src="assets/metal-keepsake.jpg" alt="Detailed silver metal keepsake pendant" />
+        </div>
+      </section>
+    </main>
+
+    <aside class="cart-panel" aria-label="Shopping cart" data-cart-panel aria-hidden="true">
+      <div class="cart-panel-inner">
+        <div class="cart-head">
+          <div>
+            <p class="eyebrow">Order builder</p>
+            <h2>Your cart</h2>
+          </div>
+          <button class="icon-button" type="button" data-cart-close aria-label="Close cart">x</button>
+        </div>
+
+        <div class="cart-items" data-cart-items></div>
+
+        <form class="checkout-form" data-order-form>
+          <div class="field-row">
+            <label>
+              Name
+              <input name="customerName" required autocomplete="name" />
+            </label>
+            <label>
+              Phone
+              <input name="phone" required autocomplete="tel" />
+            </label>
+          </div>
+          <label>
+            Email
+            <input name="email" type="email" autocomplete="email" />
+          </label>
+          <label>
+            Fulfillment
+            <select name="fulfillment">
+              <option>Local pickup</option>
+              <option>Ship to me</option>
+              <option>Event delivery</option>
+            </select>
+          </label>
+          <label>
+            Order notes
+            <textarea
+              name="notes"
+              rows="3"
+              placeholder="Timeline, address, logo details, colors, or anything Wilson should know."
+            ></textarea>
+          </label>
+
+          <div class="totals">
+            <span>Estimated subtotal</span>
+            <strong data-cart-total>$0</strong>
+          </div>
+          <p class="fine-print">
+            Final price may change for oversized pieces, detailed art cleanup, rush work, or shipping.
+          </p>
+          <button class="button primary full" type="submit">Save order request</button>
+          <button class="button secondary full" type="button" data-copy-order>Copy order summary</button>
+        </form>
+
+        <section class="saved-orders" aria-labelledby="saved-orders-title">
+          <div class="saved-orders-head">
+            <h3 id="saved-orders-title">Saved requests</h3>
+            <button type="button" data-clear-orders>Clear</button>
+          </div>
+          <div data-saved-orders></div>
+        </section>
+      </div>
+    </aside>
+    <div class="scrim" data-cart-close></div>
+
+    <template id="product-template">
+      <article class="product-card">
+        <div class="product-image-wrap">
+          <img alt="" />
+          <span class="price-pill"></span>
+        </div>
+        <div class="product-body">
+          <div>
+            <p class="product-type"></p>
+            <h3></h3>
+            <p class="product-description"></p>
+          </div>
+          <div class="product-options"></div>
+          <button class="button primary" type="button">Customize</button>
+        </div>
+      </article>
+    </template>
+
+    <dialog class="custom-dialog" data-custom-dialog>
+      <form method="dialog" class="custom-form" data-custom-form>
+        <button class="icon-button dialog-close" value="cancel" aria-label="Close customizer">x</button>
+        <div class="custom-layout">
+          <img data-dialog-image alt="" />
+          <div>
+            <p class="eyebrow" data-dialog-type></p>
+            <h2 data-dialog-title></h2>
+            <p data-dialog-description></p>
+            <div class="dialog-price" data-dialog-price></div>
+
+            <label>
+              Quantity
+              <input name="quantity" type="number" min="1" value="1" required />
+            </label>
+            <label>
+              Personalization
+              <textarea
+                name="personalization"
+                rows="4"
+                required
+                placeholder="Names, wording, date, logo idea, size, or special instructions."
+              ></textarea>
+            </label>
+            <label>
+              Finish / color preference
+              <select name="finish" data-finish-select></select>
+            </label>
+            <label>
+              Needed by
+              <input name="neededBy" type="date" />
+            </label>
+
+            <div class="dialog-actions">
+              <button class="button secondary" value="cancel" type="button" data-dialog-cancel>Cancel</button>
+              <button class="button primary" value="default" type="submit">Add to cart</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </dialog>
+
+    <div class="toast" data-toast role="status" aria-live="polite"></div>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Swack &amp; Co. Staff Dashboard</title>
+    <link rel="icon" href="assets/swack-logo.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+    <script src="admin.js" defer></script>
+  </head>
+  <body class="admin-page">
+    <header class="site-header">
+      <a class="brand-mark" href="index.html" aria-label="Swack and Co. public site">
+        <img src="assets/swack-logo.png" alt="Swack &amp; Co. Barber Shop" />
+      </a>
+      <nav class="main-nav" aria-label="Staff navigation">
+        <a href="index.html">Public Site</a>
+        <a href="#dashboard">Dashboard</a>
+      </nav>
+      <button class="header-action" id="logoutButton" type="button">
+        <i data-lucide="log-out"></i>
+        Logout
+      </button>
+    </header>
+
+    <main>
+      <section class="login-section" id="loginView" aria-labelledby="loginTitle">
+        <form class="login-card" id="loginForm">
+          <img src="assets/swack-logo.png" alt="Swack &amp; Co. Barber Shop" />
+          <div class="section-heading compact">
+            <p class="eyebrow">Staff access</p>
+            <h1 id="loginTitle">Barber Login</h1>
+          </div>
+          <label>
+            User
+            <input id="usernameInput" type="text" autocomplete="username" placeholder="Test" required />
+          </label>
+          <label>
+            Pass
+            <input id="passwordInput" type="password" autocomplete="current-password" placeholder="1234" required />
+          </label>
+          <button class="primary-action full-action" type="submit">
+            <i data-lucide="lock-keyhole"></i>
+            Login
+          </button>
+          <p class="login-message" id="loginMessage" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section class="dashboard-section admin-dashboard is-locked" id="dashboard" aria-labelledby="dashboardTitle">
+        <div class="dashboard-top">
+          <div class="section-heading">
+            <p class="eyebrow">Behind-the-scenes software</p>
+            <h1 id="dashboardTitle">Barber Preference Dashboard</h1>
+          </div>
+          <div class="dashboard-stats">
+            <span><strong id="clientCount">0</strong> clients</span>
+            <span><strong id="appointmentCount">0</strong> bookings</span>
+            <span><strong id="noteCount">0</strong> saved notes</span>
+          </div>
+        </div>
+
+        <div class="dashboard-layout">
+          <aside class="client-sidebar">
+            <label class="search-box">
+              <i data-lucide="search"></i>
+              <input id="clientSearch" type="search" placeholder="Search clients" />
+            </label>
+            <div class="client-list" id="clientList"></div>
+          </aside>
+
+          <article class="client-record" id="clientRecord"></article>
+
+          <form class="note-form" id="noteForm">
+            <div class="section-heading compact">
+              <p class="eyebrow">Update record</p>
+              <h3>Add a Cut Note</h3>
+            </div>
+            <label>
+              Fade / sides
+              <input id="fadeInput" type="text" placeholder="Low fade, #1 guard" required />
+            </label>
+            <label>
+              Top / style
+              <input id="topInput" type="text" placeholder="Textured crop, leave 2 inches" required />
+            </label>
+            <label>
+              Neckline / beard
+              <input id="detailInput" type="text" placeholder="Tapered neckline, beard line up" />
+            </label>
+            <button class="primary-action full-action" type="submit">
+              <i data-lucide="save"></i>
+              Save Preference
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

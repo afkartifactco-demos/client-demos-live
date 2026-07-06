@@ -1,0 +1,9 @@
+.DS_Store
+Thumbs.db
+*.zip
+*.exe
+output/
+test-results/
+.codex-remote-attachments/
+.playwright-cli/
+local-hub-check.png

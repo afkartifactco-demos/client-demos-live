@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Swack &amp; Co. Barber Shop Demo</title>
+    <link rel="icon" href="assets/swack-logo.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand-mark" href="#home" aria-label="Swack and Co. home">
+        <img src="assets/swack-logo.png" alt="Swack &amp; Co. Barber Shop" />
+      </a>
+      <nav class="main-nav" aria-label="Primary navigation">
+        <a href="#services">Services</a>
+        <a href="#barbers">RJ</a>
+        <a href="#location">Location</a>
+        <a href="#contact">Contact</a>
+        <a href="admin.html">Staff Login</a>
+      </nav>
+      <a class="header-action" href="#booking">
+        <i data-lucide="calendar-plus"></i>
+        Book
+      </a>
+    </header>
+
+    <main id="home">
+      <section class="hero-section" aria-labelledby="heroTitle">
+        <div class="hero-media" aria-hidden="true">
+          <img src="assets/swack-shop-interior.png" alt="" />
+        </div>
+        <div class="hero-copy">
+          <p class="eyebrow">130 S. High Street | Hillsboro, OH</p>
+          <h1 id="heroTitle">Classic cuts remembered every time.</h1>
+          <p>
+            A client-ready homepage and booking system for Swack &amp; Co. Customers can choose a service and reserve a chair with owner-barber RJ Swackhamer without seeing the private shop tools.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-action" href="#booking">
+              <i data-lucide="calendar-check"></i>
+              Schedule a Cut
+            </a>
+            <a class="ghost-action" href="admin.html">
+              <i data-lucide="lock-keyhole"></i>
+              Staff Login
+            </a>
+          </div>
+        </div>
+        <div class="hero-panel" aria-label="Today at the shop">
+          <div>
+            <p class="eyebrow">Today's chair flow</p>
+            <h2>9 appointments</h2>
+          </div>
+          <div class="chair-list">
+            <span><strong>10:00</strong> Travis B. - low skin fade</span>
+            <span><strong>11:30</strong> Ben W. - beard shape</span>
+            <span><strong>1:15</strong> Marcus R. - executive cut</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="service-section" id="services" aria-labelledby="servicesTitle">
+        <div class="section-heading">
+          <p class="eyebrow">Public website</p>
+          <h2 id="servicesTitle">Services Built for Quick Booking</h2>
+        </div>
+        <div class="service-grid" id="serviceGrid"></div>
+      </section>
+
+      <section class="booking-section" id="booking" aria-labelledby="bookingTitle">
+        <form class="booking-card" id="bookingForm">
+          <div class="section-heading compact">
+            <p class="eyebrow">Appointment scheduler</p>
+            <h2 id="bookingTitle">Book the Next Chair</h2>
+          </div>
+          <div class="form-grid">
+            <label>
+              Name
+              <input id="clientName" name="clientName" type="text" placeholder="Client name" required />
+            </label>
+            <label>
+              Phone
+              <input id="clientPhone" name="clientPhone" type="tel" placeholder="(937) 840-8149" required />
+            </label>
+            <label>
+              Service
+              <select id="serviceSelect" name="serviceSelect" required></select>
+            </label>
+            <label>
+              Barber
+              <select id="barberSelect" name="barberSelect" required>
+                <option>RJ Swackhamer</option>
+              </select>
+            </label>
+            <label>
+              Date
+              <input id="dateInput" name="dateInput" type="date" required />
+            </label>
+            <label>
+              Time
+              <select id="timeSelect" name="timeSelect" required>
+                <option>9:00 AM</option>
+                <option>10:00 AM</option>
+                <option>11:30 AM</option>
+                <option>1:15 PM</option>
+                <option>2:30 PM</option>
+                <option>4:00 PM</option>
+              </select>
+            </label>
+          </div>
+          <label>
+            Cut notes
+            <textarea id="cutNotes" name="cutNotes" rows="4" placeholder="Example: 1.5 on sides, textured top, natural neckline"></textarea>
+          </label>
+          <button class="primary-action full-action" type="submit">
+            <i data-lucide="calendar-plus"></i>
+            Add Appointment
+          </button>
+          <p class="booking-confirmation" id="bookingConfirmation" role="status" aria-live="polite"></p>
+        </form>
+
+        <aside class="schedule-card" aria-labelledby="scheduleTitle">
+          <div class="section-heading compact">
+            <p class="eyebrow">Live demo</p>
+            <h2 id="scheduleTitle">Upcoming Bookings</h2>
+          </div>
+          <div class="appointment-list" id="appointmentList"></div>
+        </aside>
+      </section>
+
+      <section class="barber-section" id="barbers" aria-labelledby="barbersTitle">
+        <div class="section-heading">
+          <p class="eyebrow">Owner and barber</p>
+          <h2 id="barbersTitle">RJ Swackhamer Runs the Chair</h2>
+        </div>
+        <div class="barber-grid">
+          <article>
+            <i data-lucide="scissors"></i>
+            <h3>Owner-Led Service</h3>
+            <p>Every booking goes to RJ, keeping the experience personal and consistent from visit to visit.</p>
+          </article>
+          <article>
+            <i data-lucide="message-square-heart"></i>
+            <h3>Repeat Clients</h3>
+            <p>Saved preferences help RJ remember the details clients notice most.</p>
+          </article>
+          <article>
+            <i data-lucide="shield-check"></i>
+            <h3>Private Notes</h3>
+            <p>Client records stay behind the scenes, separate from the public-facing site.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="location-section" id="location" aria-labelledby="locationTitle">
+        <div class="location-copy">
+          <p class="eyebrow">Visit the shop</p>
+          <h2 id="locationTitle">130 S. High Street, Hillsboro, OH</h2>
+          <p>
+            A real shop location and a simple booking flow give clients a clear next step: reserve a chair with RJ or call before stopping in.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-action" href="https://www.google.com/maps/search/?api=1&query=130%20S.%20High%20Street%20Hillsboro%2C%20OH">
+              <i data-lucide="map-pin"></i>
+              Get Directions
+            </a>
+            <a class="ghost-action" href="tel:+19378408149">
+              <i data-lucide="phone"></i>
+              937-840-8149
+            </a>
+          </div>
+        </div>
+        <div class="location-photo">
+          <img src="assets/swack-shop-interior.png" alt="Inside Swack &amp; Co. Barber Shop at 130 S. High Street in Hillsboro, Ohio" />
+        </div>
+      </section>
+
+      <section class="contact-section" id="contact" aria-labelledby="contactTitle">
+        <div>
+          <p class="eyebrow">Ready for the pitch</p>
+          <h2 id="contactTitle">A Homepage That Books. Staff Software That Remembers.</h2>
+          <p class="contact-detail">130 S. High Street, Hillsboro, OH</p>
+        </div>
+        <div class="contact-actions">
+          <a class="primary-action" href="tel:+19378408149">
+            <i data-lucide="phone"></i>
+            937-840-8149
+          </a>
+          <a class="ghost-action" href="#booking">
+            <i data-lucide="calendar-days"></i>
+            Book Online
+          </a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

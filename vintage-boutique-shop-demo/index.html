@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Malita's Place Boutique Shop Demo</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23334c43'/%3E%3Ctext x='32' y='40' font-family='Arial' font-size='26' text-anchor='middle' fill='white'%3EMP%3C/text%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Inventory shop demo</p>
+        <h1>Malita's Place</h1>
+      </div>
+      <nav class="view-tabs" aria-label="Main views">
+        <button class="tab is-active" data-view="shop" type="button">
+          <i data-lucide="store"></i>
+          Shop
+        </button>
+        <button class="tab" data-view="inventory" type="button">
+          <i data-lucide="clipboard-list"></i>
+          Owner
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="notice">
+        <i data-lucide="sparkles"></i>
+        <p>
+          Malita's Place listings update from inventory. When stock reaches zero, the item stays visible but cannot be purchased.
+        </p>
+      </section>
+
+      <section class="shop-view app-view is-visible" id="shopView" aria-labelledby="shopTitle">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Public shop</p>
+            <h2 id="shopTitle">Available pieces</h2>
+          </div>
+          <div class="cart-button">
+            <i data-lucide="shopping-bag"></i>
+            <span><strong id="cartCount">0</strong> in cart</span>
+          </div>
+        </div>
+        <div class="filters" role="group" aria-label="Shop filters">
+          <button class="filter is-active" data-filter="all" type="button">All</button>
+          <button class="filter" data-filter="furniture" type="button">Furniture</button>
+          <button class="filter" data-filter="decor" type="button">Decor</button>
+          <button class="filter" data-filter="custom" type="button">Custom</button>
+        </div>
+        <div class="product-grid" id="productGrid"></div>
+        <aside class="checkout-panel" aria-labelledby="checkoutTitle">
+          <div>
+            <p class="eyebrow">Test checkout</p>
+            <h3 id="checkoutTitle">Cart</h3>
+          </div>
+          <div id="cartItems" class="cart-items"></div>
+          <button class="primary-action" id="checkoutButton" type="button">
+            <i data-lucide="credit-card"></i>
+            Place demo order
+          </button>
+        </aside>
+      </section>
+
+      <section class="inventory-view app-view" id="inventoryView" aria-labelledby="inventoryTitle">
+        <div class="owner-layout">
+          <form class="add-form" id="itemForm">
+            <div class="section-head compact">
+              <div>
+                <p class="eyebrow">Owner tools</p>
+                <h2 id="inventoryTitle">Add inventory</h2>
+              </div>
+              <span class="draft-pill"><i data-lucide="file-clock"></i> Saves as draft first</span>
+            </div>
+
+            <label>
+              Item name
+              <input id="nameInput" name="name" type="text" placeholder="Example: Oak washstand" required />
+            </label>
+
+            <label>
+              Price
+              <input id="priceInput" name="price" type="number" min="1" step="1" placeholder="245" required />
+            </label>
+
+            <label>
+              Category
+              <select id="categoryInput" name="category">
+                <option value="furniture">Furniture</option>
+                <option value="decor">Decor</option>
+                <option value="custom">Custom</option>
+              </select>
+            </label>
+
+            <label>
+              Short description
+              <textarea id="descriptionInput" name="description" rows="4" placeholder="Tell shoppers what it is, the condition, and any measurements."></textarea>
+            </label>
+
+            <fieldset class="stock-box">
+              <legend>Stock details</legend>
+              <label>
+                Quantity available
+                <input id="quantityInput" name="quantity" type="number" min="0" step="1" value="1" required />
+              </label>
+              <label class="check-row">
+                <input id="restockableInput" name="restockable" type="checkbox" />
+                <span>This item can be restocked</span>
+              </label>
+              <p class="field-help">Leave unchecked for one-off antique pieces. The shop will mark them unavailable when sold.</p>
+            </fieldset>
+
+            <label class="photo-drop" id="photoDrop">
+              <input id="photoInput" name="photo" type="file" accept="image/*" required />
+              <i data-lucide="image-plus"></i>
+              <span>Add a picture before saving</span>
+              <small>A preview appears here so the owner can check it first.</small>
+              <img id="photoPreview" alt="" />
+            </label>
+
+            <div class="form-actions">
+              <button class="primary-action" type="submit">
+                <i data-lucide="save"></i>
+                Save as draft
+              </button>
+              <button class="ghost-action" id="resetDemo" type="button">
+                <i data-lucide="rotate-ccw"></i>
+                Reset demo
+              </button>
+            </div>
+          </form>
+
+          <div class="inventory-panel">
+            <div class="section-head compact">
+              <div>
+                <p class="eyebrow">Review before publishing</p>
+                <h2>Inventory list</h2>
+              </div>
+              <div class="stat-row">
+                <span><strong id="draftCount">0</strong> drafts</span>
+                <span><strong id="liveCount">0</strong> live</span>
+              </div>
+            </div>
+            <div class="owner-hint" id="ownerHint">
+              <i data-lucide="hand"></i>
+              <p>New items start as drafts. Open the preview, then publish when the photo and wording look right.</p>
+            </div>
+            <div class="inventory-list" id="inventoryList"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

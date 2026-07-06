@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Adventure Cove Scorecard | Digital Mini Golf App</title>
+    <meta
+      name="description"
+      content="Use the Adventure Cove digital mini golf scorecard to track an 18-hole round and optionally post the winning score to the public leaderboard."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700;800&family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="assets/adventure-cove-logo.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body class="scorecard-page">
+    <header class="app-header">
+      <a class="brand" href="index.html" aria-label="Adventure Cove home">
+        <span class="brand-mark">
+          <img src="assets/adventure-cove-logo.png" alt="" />
+        </span>
+        <span>
+          <strong>Adventure Cove</strong>
+          <small>Scorecard</small>
+        </span>
+      </a>
+      <nav class="app-actions" aria-label="Scorecard navigation">
+        <a class="button secondary light" href="index.html">
+          <i data-lucide="home"></i>
+          Main Site
+        </a>
+      </nav>
+    </header>
+
+    <main class="scorecard-app-page">
+      <section class="scorecard-hero" aria-labelledby="scorecard-title">
+        <div>
+          <p class="eyebrow">Player mode</p>
+          <h1 id="scorecard-title">Adventure Cove Scorecard</h1>
+          <p>
+            Track every putt, crown the low score, then decide as a group whether the winner goes on
+            the public leaderboard.
+          </p>
+        </div>
+        <aside class="leaderboard-card compact" aria-labelledby="leaderboard-title">
+          <p class="eyebrow">Public scoreboard</p>
+          <h2 id="leaderboard-title">Leaderboard</h2>
+          <div class="leaderboard-list" id="leaderboard-list"></div>
+          <p class="leaderboard-note">Players only post if they opt in at the end of a round.</p>
+        </aside>
+      </section>
+
+      <section class="scorecard-stage" aria-label="Adventure Cove digital scorecard">
+        <article class="scorecard-app">
+          <div class="scorecard-topline">
+            <div>
+              <span id="scorecard-step">Players</span>
+              <strong id="scorecard-heading">Start a Round</strong>
+            </div>
+            <button class="icon-button" id="reset-scorecard" type="button" aria-label="Reset scorecard">
+              <i data-lucide="rotate-ccw"></i>
+            </button>
+          </div>
+
+          <div class="scorecard-panel is-active" id="players-panel">
+            <p class="panel-copy">Enter up to six players. Blank names are ignored.</p>
+            <p class="form-message" id="player-error" aria-live="polite"></p>
+            <div class="player-fields" aria-label="Player name fields">
+              <label><span>Player 1</span><input type="text" maxlength="16" placeholder="Name" /></label>
+              <label><span>Player 2</span><input type="text" maxlength="16" placeholder="Name" /></label>
+              <label><span>Player 3</span><input type="text" maxlength="16" placeholder="Name" /></label>
+              <label><span>Player 4</span><input type="text" maxlength="16" placeholder="Name" /></label>
+              <label><span>Player 5</span><input type="text" maxlength="16" placeholder="Name" /></label>
+              <label><span>Player 6</span><input type="text" maxlength="16" placeholder="Name" /></label>
+            </div>
+            <button class="button primary scorecard-wide" id="start-round" type="button">
+              <i data-lucide="play"></i>
+              Start Round
+            </button>
+          </div>
+
+          <div class="scorecard-panel" id="round-panel">
+            <div class="hole-summary">
+              <div>
+                <span>Current hole</span>
+                <strong id="current-hole">1</strong>
+              </div>
+              <div>
+                <span>Par</span>
+                <strong id="current-par">2</strong>
+              </div>
+              <div>
+                <span>Leader</span>
+                <strong id="current-leader">-</strong>
+              </div>
+            </div>
+            <div class="score-rows" id="score-rows"></div>
+            <div class="scorecard-actions">
+              <button class="button secondary" id="prev-hole" type="button">
+                <i data-lucide="arrow-left"></i>
+                Back
+              </button>
+              <button class="button primary" id="next-hole" type="button">
+                Next Hole
+                <i data-lucide="arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="scorecard-panel" id="finish-panel">
+            <div class="winner-card">
+              <span>Winning score</span>
+              <strong id="winner-line">-</strong>
+              <p id="winner-detail"></p>
+            </div>
+            <div class="results-table" id="results-table"></div>
+            <div class="publish-box">
+              <label class="publish-toggle">
+                <input type="checkbox" id="publish-opt-in" />
+                <span>Post the winning score to the public leaderboard</span>
+              </label>
+              <p class="publish-help">Leave this unchecked to keep the round private on this device.</p>
+              <label class="publish-name">
+                <span>Leaderboard name</span>
+                <input type="text" id="leaderboard-name" maxlength="24" placeholder="Team name or first name" />
+              </label>
+            </div>
+            <div class="scorecard-actions">
+              <button class="button secondary" id="keep-private" type="button">
+                <i data-lucide="lock"></i>
+                Keep Private
+              </button>
+              <button class="button primary" id="save-leaderboard" type="button">
+                <i data-lucide="upload"></i>
+                Save Results
+              </button>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
