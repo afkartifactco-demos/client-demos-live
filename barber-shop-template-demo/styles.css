@@ -102,6 +102,17 @@ h3 {
   object-fit: contain;
 }
 
+.text-brand {
+  min-height: 62px;
+  display: inline-flex;
+  align-items: center;
+  color: var(--ivory);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.25rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
 .main-nav {
   display: flex;
   align-items: center;
@@ -468,7 +479,10 @@ textarea:focus {
 }
 
 .login-card img {
-  width: 164px;
+  width: min(100%, 250px);
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: 8px;
   margin: 0 auto 6px;
 }
 

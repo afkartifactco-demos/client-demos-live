@@ -5,16 +5,16 @@ const services = [
   { id: "cut-shave", name: "Cut + Shave", price: 33, duration: "50 min", detail: "Adult haircut paired with a shave for a full-service visit." },
 ];
 
-const storageKey = "swackCoDemoState";
+const storageKey = "barberTemplateDemoState";
 
 const seedState = {
   selectedClientId: "travis-b",
   clients: [
     {
       id: "travis-b",
-      name: "Travis B.",
+      name: "Client A.",
       phone: "(937) 555-0194",
-      barber: "RJ Swackhamer",
+      barber: "Primary Barber",
       lastVisit: "June 26",
       preferences: ["Low skin fade", "#2 into scissors", "Natural neckline", "Matte paste"],
       notes: [
@@ -24,9 +24,9 @@ const seedState = {
     },
     {
       id: "ben-w",
-      name: "Ben W.",
+      name: "Client B.",
       phone: "(937) 555-0127",
-      barber: "RJ Swackhamer",
+      barber: "Primary Barber",
       lastVisit: "June 22",
       preferences: ["Mid taper", "Rounded back", "Beard line up", "No product"],
       notes: [
@@ -35,9 +35,9 @@ const seedState = {
     },
     {
       id: "marcus-r",
-      name: "Marcus R.",
+      name: "Client C.",
       phone: "(937) 555-0171",
-      barber: "RJ Swackhamer",
+      barber: "Primary Barber",
       lastVisit: "June 18",
       preferences: ["Executive cut", "Scissor top", "Tapered neckline", "Light pomade"],
       notes: [
@@ -46,9 +46,9 @@ const seedState = {
     },
   ],
   appointments: [
-    { id: "appt-1", clientId: "travis-b", name: "Travis B.", service: "Adult Haircut", barber: "RJ Swackhamer", date: "2026-07-03", time: "10:00 AM", notes: "Repeat low skin fade, textured top." },
-    { id: "appt-2", clientId: "ben-w", name: "Ben W.", service: "Shave", barber: "RJ Swackhamer", date: "2026-07-03", time: "11:30 AM", notes: "Keep beard fuller at chin." },
-    { id: "appt-3", clientId: "marcus-r", name: "Marcus R.", service: "Adult Haircut", barber: "RJ Swackhamer", date: "2026-07-03", time: "1:15 PM", notes: "Executive cut, natural part." },
+    { id: "appt-1", clientId: "travis-b", name: "Client A.", service: "Adult Haircut", barber: "Primary Barber", date: "2026-07-03", time: "10:00 AM", notes: "Repeat low skin fade, textured top." },
+    { id: "appt-2", clientId: "ben-w", name: "Client B.", service: "Shave", barber: "Primary Barber", date: "2026-07-03", time: "11:30 AM", notes: "Keep beard fuller at chin." },
+    { id: "appt-3", clientId: "marcus-r", name: "Client C.", service: "Adult Haircut", barber: "Primary Barber", date: "2026-07-03", time: "1:15 PM", notes: "Classic cut, natural part." },
   ],
 };
 
@@ -112,11 +112,11 @@ function normalizeState(nextState) {
   };
 
   nextState.clients.forEach((client) => {
-    client.barber = "RJ Swackhamer";
+    client.barber = "Primary Barber";
   });
 
   nextState.appointments.forEach((appointment) => {
-    appointment.barber = "RJ Swackhamer";
+    appointment.barber = "Primary Barber";
     appointment.service = serviceMap[appointment.service] || appointment.service;
   });
 

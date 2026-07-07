@@ -6,4 +6,5 @@ output/
 test-results/
 .codex-remote-attachments/
 .playwright-cli/
+.wrangler/
 local-hub-check.png

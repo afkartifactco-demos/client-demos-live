@@ -11,7 +11,7 @@ to clients.
 - Wilson's Custom Creations
 - Brewers Creative Designs
 - Shelby's Sweet & Scorched
-- Swack & Co. Barber Shop
+- Barber Shop Template
 - Curry Construction
 - Adventure Cove
 - The Mediterranean
