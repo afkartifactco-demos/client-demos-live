@@ -31,6 +31,24 @@ body {
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
+.top-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 9px 16px;
+  background: var(--espresso);
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.top-banner a {
+  color: #ffd694;
+  font-weight: 900;
+  text-decoration: none;
+}
+
 button,
 select,
 a {
@@ -300,7 +318,8 @@ p {
 }
 
 select,
-input {
+input,
+textarea {
   width: 100%;
   min-height: 46px;
   padding: 0 12px;
@@ -308,6 +327,18 @@ input {
   border-radius: 8px;
   background: var(--cream);
   color: var(--ink);
+}
+
+textarea {
+  padding: 12px;
+  font: inherit;
+  resize: vertical;
+}
+
+.order-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
 }
 
 .featured-order {
@@ -404,6 +435,54 @@ input {
 
 .checkout-button {
   width: 100%;
+}
+
+.messenger-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 42px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 8px;
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.messenger-button svg {
+  width: 18px;
+  height: 18px;
+}
+
+.intro-shell {
+  margin-top: 0;
+}
+
+.intro-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.intro-grid article {
+  display: grid;
+  gap: 10px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--white);
+}
+
+.intro-grid svg {
+  width: 30px;
+  height: 30px;
+  color: var(--mint);
+}
+
+.intro-grid span {
+  color: var(--muted);
+  line-height: 1.5;
 }
 
 .photo-strip {
@@ -559,6 +638,38 @@ input {
   font-weight: 900;
 }
 
+.flavor-builder {
+  display: grid;
+  grid-template-columns: 0.7fr 1fr;
+  gap: 18px;
+  margin-top: 18px;
+  padding: 20px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, rgba(27, 156, 192, 0.1), rgba(217, 92, 113, 0.1));
+  border: 1px solid rgba(27, 156, 192, 0.18);
+}
+
+.flavor-builder h3 {
+  margin: 0;
+  font-family: Fraunces, Georgia, serif;
+  font-size: clamp(26px, 4vw, 40px);
+  line-height: 1;
+}
+
+.flavor-builder p {
+  margin: 8px 0 0;
+  color: var(--muted);
+}
+
+.flavor-builder ul {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding-left: 18px;
+  color: var(--coffee);
+  line-height: 1.55;
+}
+
 .split-band {
   display: grid;
   grid-template-columns: 0.86fr 1fr;
@@ -634,6 +745,71 @@ input {
   line-height: 1.5;
 }
 
+.schedule-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.schedule-grid article {
+  display: grid;
+  grid-template-columns: 58px minmax(0, 1fr);
+  gap: 14px;
+  align-items: center;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--white);
+}
+
+.date-card {
+  display: grid;
+  width: 58px;
+  height: 58px;
+  place-items: center;
+  border-radius: 8px;
+  background: var(--espresso);
+  color: var(--white);
+  font-family: Fraunces, Georgia, serif;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.schedule-grid strong,
+.schedule-grid span {
+  display: block;
+}
+
+.schedule-grid span {
+  margin-top: 5px;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.booking-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.booking-form label,
+.merch-waitlist label {
+  display: grid;
+  gap: 8px;
+  color: var(--coffee);
+  font-weight: 800;
+}
+
+.full-field,
+.form-action {
+  grid-column: 1 / -1;
+}
+
+.form-action {
+  width: fit-content;
+  padding: 0 18px;
+}
+
 .merch-grid article {
   display: grid;
   gap: 12px;
@@ -685,6 +861,88 @@ input {
   font-weight: 800;
 }
 
+.merch-waitlist {
+  display: grid;
+  gap: 10px;
+  margin-top: 16px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--white);
+}
+
+.merch-waitlist div {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 10px;
+}
+
+.merch-waitlist button {
+  min-height: 46px;
+  padding: 0 16px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--mint);
+  color: var(--white);
+  font-weight: 900;
+}
+
+.faq-list {
+  display: grid;
+  gap: 10px;
+}
+
+.faq-list details {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--white);
+  overflow: hidden;
+}
+
+.faq-list summary {
+  cursor: pointer;
+  padding: 16px;
+  color: var(--coffee);
+  font-weight: 900;
+}
+
+.faq-list p {
+  margin: 0;
+  padding: 0 16px 16px;
+  color: var(--muted);
+}
+
+.site-footer {
+  display: grid;
+  grid-template-columns: 1.2fr repeat(2, minmax(0, 0.7fr));
+  gap: 24px;
+  width: min(1180px, calc(100% - 32px));
+  margin: 28px auto 0;
+  padding: 34px 0 44px;
+  border-top: 1px solid var(--line);
+}
+
+.site-footer > div {
+  display: grid;
+  gap: 8px;
+  align-content: start;
+}
+
+.site-footer .brand-mark {
+  margin-bottom: 4px;
+}
+
+.site-footer p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.site-footer a,
+.site-footer span {
+  color: var(--muted);
+  text-decoration: none;
+}
+
 .toast {
   position: fixed;
   right: 18px;
@@ -724,12 +982,25 @@ input {
 
   .menu-grid,
   .merch-grid,
+  .intro-grid,
+  .schedule-grid,
   .request-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .flavor-builder,
+  .site-footer {
+    grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 640px) {
+  .top-banner {
+    display: grid;
+    gap: 3px;
+    text-align: center;
+  }
+
   .site-header {
     padding: 12px 14px;
   }
@@ -775,8 +1046,20 @@ input {
 
   .menu-grid,
   .merch-grid,
+  .intro-grid,
+  .schedule-grid,
   .request-grid {
     grid-template-columns: 1fr;
+  }
+
+  .order-fields,
+  .booking-form,
+  .merch-waitlist div {
+    grid-template-columns: 1fr;
+  }
+
+  .form-action {
+    width: 100%;
   }
 
   .panel-heading {

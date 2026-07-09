@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Cupful of Grace Coffee | Online Orders</title>
+    <title>Cupful of Grace Coffee | Fayetteville Coffee Trailer</title>
     <meta
       name="description"
-      content="Cupful of Grace Coffee demo website with online drink ordering, event updates, and future merchandise."
+      content="Cupful of Grace Coffee is a mobile coffee and dirty drink trailer serving local favorite coffees, dirty sodas, dirty energy drinks, lemonades, bakery treats, event bookings, and future merchandise."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,6 +19,11 @@
     <script src="script.js" defer></script>
   </head>
   <body>
+    <div class="top-banner">
+      <span>Mobile coffee trailer serving Fayetteville, markets, fundraisers, and private events.</span>
+      <a href="https://www.facebook.com/profile.php?id=61579149267662" target="_blank" rel="noreferrer">Follow for stops</a>
+    </div>
+
     <header class="site-header" id="top">
       <a class="brand" href="#top" aria-label="Cupful of Grace Coffee home">
         <span class="brand-mark">CG</span>
@@ -31,6 +36,7 @@
         <a href="#order">Order</a>
         <a href="#menu">Menu</a>
         <a href="#events">Events</a>
+        <a href="#booking">Book</a>
         <a href="#merch">Merch</a>
       </nav>
       <a class="icon-button header-order" href="#order" aria-label="Start an order">
@@ -81,23 +87,41 @@
               <p class="eyebrow">Online order</p>
               <h2 id="order-title">Build your pickup order</h2>
             </div>
-            <span class="status-pill">Demo cart</span>
+            <span class="status-pill">Order request</span>
           </div>
 
-          <div class="pickup-row">
-            <label for="pickup-time">Pickup time</label>
-            <select id="pickup-time">
-              <option>ASAP - next stop</option>
-              <option>10:15 AM</option>
-              <option>10:30 AM</option>
-              <option>10:45 AM</option>
-              <option>11:00 AM</option>
-            </select>
+          <div class="order-fields">
+            <div class="pickup-row">
+              <label for="pickup-time">Pickup time</label>
+              <select id="pickup-time">
+                <option>ASAP - next stop</option>
+                <option>10:15 AM</option>
+                <option>10:30 AM</option>
+                <option>10:45 AM</option>
+                <option>11:00 AM</option>
+                <option>Custom event pickup</option>
+              </select>
+            </div>
+            <div class="pickup-row">
+              <label for="drink-style">Drink style</label>
+              <select id="drink-style">
+                <option>Iced</option>
+                <option>Hot</option>
+                <option>Frozen</option>
+                <option>Soda base</option>
+                <option>Energy base</option>
+              </select>
+            </div>
           </div>
 
           <div class="customer-row">
             <label for="customer-name">Name for pickup</label>
             <input id="customer-name" type="text" placeholder="Your name" />
+          </div>
+
+          <div class="customer-row">
+            <label for="order-notes">Notes</label>
+            <textarea id="order-notes" rows="3" placeholder="Milk choice, extra flavor, no cold foam, etc."></textarea>
           </div>
 
           <div class="featured-order" data-featured>
@@ -126,8 +150,41 @@
               <i data-lucide="send"></i>
               <span>Preview order text</span>
             </button>
+            <a class="messenger-button" href="https://www.facebook.com/profile.php?id=61579149267662" target="_blank" rel="noreferrer">
+              <i data-lucide="message-circle"></i>
+              <span>Message Cupful on Facebook</span>
+            </a>
           </div>
         </aside>
+      </section>
+
+      <section class="section-shell intro-shell" aria-labelledby="intro-title">
+        <div class="section-heading">
+          <p class="eyebrow">What they serve</p>
+          <h2 id="intro-title">Coffee, dirty drinks, bakery treats, and grace on wheels</h2>
+        </div>
+        <div class="intro-grid">
+          <article>
+            <i data-lucide="coffee"></i>
+            <strong>Local favorite coffees</strong>
+            <span>Bourbon Pecan, Brown Sugar Buckeye, Fireside Cookie Dream, French Toast, and White Chocolate Mocha.</span>
+          </article>
+          <article>
+            <i data-lucide="cup-soda"></i>
+            <strong>Dirty soda and energy</strong>
+            <span>Sprite, Dr Pepper, Alani, Red Bull, fruit flavors, sweet cream, and cold foam builds.</span>
+          </article>
+          <article>
+            <i data-lucide="croissant"></i>
+            <strong>Trailer treats</strong>
+            <span>Cinnamon rolls, babka, turnovers, and rotating bakery items when available.</span>
+          </article>
+          <article>
+            <i data-lucide="heart-handshake"></i>
+            <strong>Events and fundraisers</strong>
+            <span>A warm, faith-forward trailer experience for markets, schools, churches, showers, and community days.</span>
+          </article>
+        </div>
       </section>
 
       <section class="photo-strip" aria-label="Cupful of Grace Coffee photos">
@@ -156,6 +213,18 @@
           <button type="button" class="filter" data-filter="bakery">Bakery</button>
         </div>
         <div class="menu-grid" data-menu-grid></div>
+        <div class="flavor-builder">
+          <div>
+            <p class="eyebrow">Build your own</p>
+            <h3>Flavor your way</h3>
+            <p>Start with coffee, Sprite, Dr Pepper, lemonade, Alani, or Red Bull. Add fruit syrups, dessert flavors, sweet cream, or cold foam.</p>
+          </div>
+          <ul>
+            <li>Fruit: blackberry, blueberry, peach, raspberry, strawberry, lime, mango, watermelon, pineapple, coconut</li>
+            <li>Dessert: caramel, cookie butter, cupcake, vanilla, cinnamon brown sugar, butter pecan, peanut butter</li>
+            <li>Finishes: sweet cream, cold foam, drizzle, extra flavor, frozen blend</li>
+          </ul>
+        </div>
       </section>
 
       <section class="order-preview section-shell" aria-labelledby="request-title">
@@ -221,6 +290,77 @@
         </div>
       </section>
 
+      <section class="section-shell schedule-shell" aria-labelledby="schedule-title">
+        <div class="section-heading">
+          <p class="eyebrow">Trailer schedule</p>
+          <h2 id="schedule-title">Upcoming stops and event style</h2>
+          <p>Specific dates can be updated from Facebook posts. The site is structured so new stops can be swapped in quickly.</p>
+        </div>
+        <div class="schedule-grid">
+          <article>
+            <span class="date-card">Fri</span>
+            <div>
+              <strong>Summer Makers Market</strong>
+              <span>Dragonfly Village, 20860 OH-251, Fayetteville, OH</span>
+            </div>
+          </article>
+          <article>
+            <span class="date-card">AM</span>
+            <div>
+              <strong>Market morning pickup</strong>
+              <span>Coffee favorites, dirty drinks, and limited bakery case.</span>
+            </div>
+          </article>
+          <article>
+            <span class="date-card">PM</span>
+            <div>
+              <strong>Private event trailer</strong>
+              <span>Custom menus for graduations, showers, fundraisers, and church events.</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-shell booking-shell" id="booking" aria-labelledby="booking-title">
+        <div class="section-heading">
+          <p class="eyebrow">Book the trailer</p>
+          <h2 id="booking-title">Bring Cupful of Grace to your next gathering</h2>
+          <p>Use this booking section as the public intake path. The final site can connect it to email, a form service, or Messenger.</p>
+        </div>
+        <form class="booking-form" data-booking-form>
+          <label>
+            Event type
+            <select id="event-type">
+              <option>Vendor market</option>
+              <option>Fundraiser</option>
+              <option>Private party</option>
+              <option>School or church event</option>
+              <option>Other</option>
+            </select>
+          </label>
+          <label>
+            Estimated guests
+            <input id="event-guests" type="number" min="10" placeholder="75" />
+          </label>
+          <label>
+            Event date
+            <input id="event-date" type="date" />
+          </label>
+          <label>
+            Location
+            <input id="event-location" type="text" placeholder="Venue or town" />
+          </label>
+          <label class="full-field">
+            Notes
+            <textarea id="event-notes" rows="4" placeholder="Tell us about the event, setup window, and menu needs."></textarea>
+          </label>
+          <button class="primary-action form-action" type="button" data-booking-preview>
+            <i data-lucide="clipboard-list"></i>
+            <span>Preview booking request</span>
+          </button>
+        </form>
+      </section>
+
       <section class="section-shell merch-shell" id="merch" aria-labelledby="merch-title">
         <div class="section-heading">
           <p class="eyebrow">Coming next</p>
@@ -244,8 +384,56 @@
             <small>Coming soon</small>
           </article>
         </div>
+        <form class="merch-waitlist" data-merch-form>
+          <label for="merch-email">Get notified when merch drops</label>
+          <div>
+            <input id="merch-email" type="email" placeholder="email@example.com" />
+            <button type="button" data-merch-preview>Join waitlist</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="section-shell faq-shell" aria-labelledby="faq-title">
+        <div class="section-heading">
+          <p class="eyebrow">Good to know</p>
+          <h2 id="faq-title">Questions before you order</h2>
+        </div>
+        <div class="faq-list">
+          <details>
+            <summary>Can I order before I get to the trailer?</summary>
+            <p>Yes. The request flow is designed for order-ahead pickup. The owner can confirm timing and availability before payment is collected.</p>
+          </details>
+          <details>
+            <summary>Do you serve more than coffee?</summary>
+            <p>Yes. The menu includes dirty soda, dirty energy, lemonade, hot chocolate, frozen drinks, and rotating bakery treats.</p>
+          </details>
+          <details>
+            <summary>Can the trailer come to private events?</summary>
+            <p>Yes. Markets, fundraisers, graduations, showers, school events, and church gatherings are all good fits.</p>
+          </details>
+        </div>
       </section>
     </main>
+
+    <footer class="site-footer">
+      <div>
+        <span class="brand-mark">CG</span>
+        <strong>Cupful of Grace Coffee</strong>
+        <p>Fueled by faith, grace, and caffeine.</p>
+      </div>
+      <div>
+        <strong>Contact</strong>
+        <a href="https://www.facebook.com/profile.php?id=61579149267662" target="_blank" rel="noreferrer">Facebook page</a>
+        <a href="#booking">Book the trailer</a>
+        <a href="#order">Start an order</a>
+      </div>
+      <div>
+        <strong>Serving</strong>
+        <span>Fayetteville, OH</span>
+        <span>Markets and private events</span>
+        <span>Merch coming soon</span>
+      </div>
+    </footer>
 
     <div class="toast" data-toast role="status" aria-live="polite"></div>
   </body>

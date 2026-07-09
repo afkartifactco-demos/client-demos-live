@@ -150,6 +150,7 @@ const menuGrid = document.querySelector("[data-menu-grid]");
 const cartItems = document.querySelector("[data-cart-items]");
 const cartTotal = document.querySelector("[data-cart-total]");
 const toast = document.querySelector("[data-toast]");
+const orderNotes = document.querySelector("#order-notes");
 let toastTimer;
 
 function money(value) {
@@ -247,12 +248,31 @@ document.addEventListener("click", (event) => {
 
   if (event.target.closest("[data-checkout]")) {
     const pickupTime = document.querySelector("#pickup-time").value;
+    const drinkStyle = document.querySelector("#drink-style").value;
     const customerName = document.querySelector("#customer-name").value.trim() || "Guest";
+    const notes = orderNotes.value.trim();
     const count = Array.from(cart.values()).reduce((sum, entry) => sum + entry.qty, 0);
     const message =
       count === 0
         ? "Add a drink or treat before sending the order request."
-        : `${customerName}'s ${count} item order is ready to send for ${pickupTime}.`;
+        : `${customerName}'s ${count} item ${drinkStyle.toLowerCase()} order is ready for ${pickupTime}${notes ? ` (${notes})` : ""}.`;
+    showToast(message);
+    return;
+  }
+
+  if (event.target.closest("[data-booking-preview]")) {
+    const eventType = document.querySelector("#event-type").value;
+    const guests = document.querySelector("#event-guests").value || "guest count TBD";
+    const date = document.querySelector("#event-date").value || "date TBD";
+    const location = document.querySelector("#event-location").value.trim() || "location TBD";
+    const message = `${eventType} request preview: ${guests} guests, ${date}, ${location}.`;
+    showToast(message);
+    return;
+  }
+
+  if (event.target.closest("[data-merch-preview]")) {
+    const email = document.querySelector("#merch-email").value.trim();
+    const message = email ? `Merch waitlist preview saved for ${email}.` : "Add an email before joining the merch waitlist.";
     showToast(message);
   }
 });
