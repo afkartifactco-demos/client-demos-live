@@ -8,6 +8,7 @@ to clients.
 
 ## Demos
 
+- Tri-State News & Weather
 - Wilson's Custom Creations
 - Brewers Creative Designs
 - Shelby's Sweet & Scorched
