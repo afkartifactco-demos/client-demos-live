@@ -11,7 +11,7 @@
     "name": "rolldown-runtime"
   },
   "app/page.tsx": {
-    "file": "assets/page-CBJAkUqk.js",
+    "file": "assets/page-hreiYt-O.js",
     "name": "page",
     "src": "app/page.tsx",
     "isDynamicEntry": true,
@@ -20,8 +20,19 @@
       "_framework-DjPHiq1u.js"
     ]
   },
+  "app/publisher/page.tsx": {
+    "file": "assets/page-CbPqY9Xd.js",
+    "name": "page",
+    "src": "app/publisher/page.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-S-ySWqyJ.js",
+      "_framework-DjPHiq1u.js",
+      "node_modules/vinext/dist/shims/link.js"
+    ]
+  },
   "node_modules/vinext/dist/shims/layout-segment-context.js": {
-    "file": "assets/layout-segment-context-Buq2eiVh.js",
+    "file": "assets/layout-segment-context-CKTsGTlg.js",
     "name": "layout-segment-context",
     "src": "node_modules/vinext/dist/shims/layout-segment-context.js",
     "isDynamicEntry": true,
@@ -31,8 +42,37 @@
       "_framework-DjPHiq1u.js"
     ]
   },
+  "node_modules/vinext/dist/shims/link.js": {
+    "file": "assets/link-J646zqnR.js",
+    "name": "link",
+    "src": "node_modules/vinext/dist/shims/link.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-S-ySWqyJ.js",
+      "virtual:vinext-app-browser-entry",
+      "_framework-DjPHiq1u.js"
+    ],
+    "dynamicImports": [
+      "node_modules/vinext/dist/shims/router.js"
+    ]
+  },
+  "node_modules/vinext/dist/shims/router.js": {
+    "file": "assets/router-BB1p2UpW.js",
+    "name": "router",
+    "src": "node_modules/vinext/dist/shims/router.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-S-ySWqyJ.js",
+      "virtual:vinext-app-browser-entry",
+      "_framework-DjPHiq1u.js",
+      "node_modules/vinext/dist/shims/link.js"
+    ],
+    "dynamicImports": [
+      "_framework-DjPHiq1u.js"
+    ]
+  },
   "virtual:vinext-app-browser-entry": {
-    "file": "assets/index-CXDfkcz-.js",
+    "file": "assets/index-CxQagG_b.js",
     "name": "index",
     "src": "virtual:vinext-app-browser-entry",
     "isEntry": true,
@@ -43,7 +83,9 @@
     "dynamicImports": [
       "node_modules/vinext/dist/shims/layout-segment-context.js",
       "virtual:vinext-app-browser-entry",
-      "app/page.tsx"
+      "app/page.tsx",
+      "app/publisher/page.tsx",
+      "node_modules/vinext/dist/shims/link.js"
     ]
   }
 }

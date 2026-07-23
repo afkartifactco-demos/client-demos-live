@@ -6,6 +6,7 @@
     { "name": "Cupful of Grace Coffee", "url": "https://cupfulofgrace.com/", "category": "Mobile food and beverage" }
   ],
   "concepts": [
+    { "name": "Tri-State News & Weather", "path": "tri-state-news-weather-demo/", "category": "Local publication" },
     { "name": "Northline Exterior", "path": "curry-construction-demo/", "category": "Contractor" },
     { "name": "Ember & Sugar", "path": "shelbys-sweet-scorched-demo/", "category": "Dessert pop-up" },
     { "name": "Olive & Hearth", "path": "mediterranean-refresh-demo/", "category": "Restaurant" },

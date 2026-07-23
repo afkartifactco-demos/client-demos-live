@@ -1,0 +1,9 @@
+{
+  "name": "Tri-State News & Weather",
+  "short_name": "Tri-State News",
+  "description": "Local Ohio weather alerts, closings, openings and community news.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f7f1e3",
+  "theme_color": "#102a43"
+}
