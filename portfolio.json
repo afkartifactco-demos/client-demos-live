@@ -1,9 +1,9 @@
 {
   "live": [
-    { "name": "Malita's Place", "path": "vintage-boutique-shop-demo/", "category": "Boutique retail" },
-    { "name": "Adventure Cove", "path": "adventure-cove-upgrade-demo/", "category": "Family entertainment" },
+    { "name": "Malita's Place", "url": "https://malitasplace.com/", "category": "Boutique retail" },
+    { "name": "Adventure Cove", "url": "https://adventurecovegolf.com/", "category": "Family entertainment" },
     { "name": "Wilson's Custom Creations", "url": "https://wilsonscustomcreations.com/", "category": "Custom fabrication" },
-    { "name": "Cupful of Grace Coffee", "path": "cupful-of-grace-coffee-demo/", "category": "Mobile food and beverage" }
+    { "name": "Cupful of Grace Coffee", "url": "https://cupfulofgrace.com/", "category": "Mobile food and beverage" }
   ],
   "concepts": [
     { "name": "Local Signal", "path": "tri-state-news-weather-demo/", "category": "Local news" },
