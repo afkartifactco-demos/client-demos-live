@@ -123,7 +123,7 @@ nav a:hover {
   inset: 0;
   background:
     linear-gradient(90deg, rgba(33, 26, 22, 0.86), rgba(33, 26, 22, 0.45) 52%, rgba(33, 26, 22, 0.12)),
-    url("assets/pizza-hero.jpg") center / cover;
+    url("assets/restaurant-concept-hero.png") center / cover;
 }
 
 .hero-content {
@@ -395,7 +395,7 @@ h2 {
   justify-content: flex-end;
   background:
     linear-gradient(180deg, rgba(33, 26, 22, 0.05), rgba(33, 26, 22, 0.78)),
-    url("assets/breadsticks.jpg") center / cover;
+    url("assets/restaurant-concept-hero.png") center / cover;
   color: white;
 }
 
@@ -488,4 +488,22 @@ footer p {
   footer {
     flex-direction: column;
   }
+}
+
+.concept-banner {
+  position: relative;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  padding: 10px 20px;
+  background: #35d5d2;
+  color: #101018;
+  font: 600 13px/1.4 Arial, sans-serif;
+}
+
+.concept-banner strong { text-transform: uppercase; }
+
+@media (max-width: 640px) {
+  .concept-banner { align-items: center; flex-direction: column; gap: 2px; }
 }

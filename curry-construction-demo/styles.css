@@ -761,3 +761,26 @@ textarea:focus {
     aspect-ratio: 16 / 10;
   }
 }
+
+.concept-banner {
+  position: relative;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  padding: 10px 20px;
+  background: #d7f34a;
+  color: #10130b;
+  font-size: 13px;
+}
+
+.concept-banner strong { text-transform: uppercase; }
+
+.concept-banner + .site-header {
+  inset: 35px 0 auto;
+}
+
+@media (max-width: 640px) {
+  .concept-banner { align-items: center; flex-direction: column; gap: 2px; }
+  .concept-banner + .site-header { inset: 53px 0 auto; }
+}

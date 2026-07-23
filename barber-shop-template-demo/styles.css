@@ -742,3 +742,21 @@ textarea:focus {
     width: 100%;
   }
 }
+
+.concept-banner {
+  position: relative;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  padding: 10px 20px;
+  background: #35d5d2;
+  color: #101018;
+  font-size: 13px;
+}
+
+.concept-banner strong { text-transform: uppercase; }
+
+@media (max-width: 640px) {
+  .concept-banner { align-items: center; flex-direction: column; gap: 2px; }
+}

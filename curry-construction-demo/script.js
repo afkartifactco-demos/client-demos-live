@@ -1,4 +1,3 @@
-const quoteEmail = "jlc_construction@yahoo.com";
 const estimateForm = document.querySelector("#estimateForm");
 const formStatus = document.querySelector("#formStatus");
 const projectCards = Array.from(document.querySelectorAll(".project-card"));
@@ -13,10 +12,6 @@ function showFilteredProjects(filter) {
     const isVisible = filter === "all" || tags.includes(filter);
     card.classList.toggle("is-hidden", !isVisible);
   });
-}
-
-function encodeMailtoLine(label, value) {
-  return `${label}: ${value || "Not provided"}`;
 }
 
 filterButtons.forEach((button) => {
@@ -57,22 +52,8 @@ estimateForm.addEventListener("submit", (event) => {
   const timeline = document.querySelector("#timelineInput").value;
   const notes = document.querySelector("#notesInput").value.trim();
 
-  const subject = `Curry Construction Estimate Request - ${projectType}`;
-  const body = [
-    "New estimate request from the Curry Construction Services website.",
-    "",
-    encodeMailtoLine("Name", name),
-    encodeMailtoLine("Email", email),
-    encodeMailtoLine("Phone", phone),
-    encodeMailtoLine("Location", location),
-    encodeMailtoLine("Project type", projectType),
-    encodeMailtoLine("Timeline", timeline),
-    "",
-    encodeMailtoLine("Project notes", notes),
-  ].join("\n");
-
-  window.location.href = `mailto:${quoteEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-  formStatus.textContent = "Opening your email app with the estimate request addressed to Curry Construction Services LLC.";
+  const provided = [name, email, phone, location, projectType, timeline, notes].filter(Boolean).length;
+  formStatus.textContent = `Concept complete: ${provided} project details captured. A production build would send this to the contractor's preferred inbox or CRM.`;
 });
 
 window.addEventListener("DOMContentLoaded", () => {

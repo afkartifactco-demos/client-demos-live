@@ -1,26 +1,26 @@
-# Client Demos Live
+# AFK Artifact Website Portfolio
 
-Clean static deployment bundle for client website demos.
+Static Cloudflare Pages deployment containing approved client launches and fictional website concepts.
 
-This folder is intended for GitHub + Cloudflare Pages hosting. It excludes local-only source dumps,
-test screenshots, installer files, remote attachments, and other artifacts that should not be served
-to clients.
+## Live client work
 
-## Demos
-
-- Tri-State News & Weather
-- Wilson's Custom Creations
-- Custom Apparel Shop Template
-- Shelby's Sweet & Scorched
-- Barber Shop Template
-- Curry Construction
+- Malita's Place
 - Adventure Cove
-- The Mediterranean
-- Vintage Boutique Shop
+- Wilson's Custom Creations
+- Cupful of Grace Coffee
+
+## Concept templates
+
+- Local Signal News Template
+- Northline Exterior Concept
+- Ember & Sugar Dessert Concept
+- Olive & Hearth Restaurant Concept
+- Custom Apparel Studio Template
+- Barber Booking Studio Template
+
+Concept templates use fictional business identities, placeholder contact details, and sample content.
 
 ## Cloudflare Pages
-
-Use these settings:
 
 - Framework preset: None
 - Build command: leave blank

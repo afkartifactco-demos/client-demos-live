@@ -1,17 +1,7 @@
-# The Mediterranean Restaurant & Cafe
+# Olive & Hearth Restaurant Concept
 
-Open `index.html` directly in a browser.
+Fictional neighborhood restaurant template with menu highlights, visit information, event
+positioning, and mobile-friendly calls to action.
 
-Static site build for The Mediterranean Restaurant & Cafe at 53 E Main St, Wilmington, OH 45177.
-
-Business details:
-
-- Phone: `(937) 382-6300`
-- Address: `53 E Main St, Wilmington, OH 45177`
-- Hours shown in public listings: Tue-Fri 11 AM-9 PM, Saturday 5 PM-9 PM, closed Sunday/Monday
-
-Build notes:
-
-- `index.html` is the landing page.
-- `styles.css` contains the full responsive layout.
-- `script.js` controls menu category filtering.
+All identity, menu, address, phone, hours, and AI-generated food photography are placeholders.
+`script.js` controls the menu category filtering. Open `index.html` directly to review it.

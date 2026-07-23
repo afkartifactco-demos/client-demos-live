@@ -1,17 +1,7 @@
-# Shelby's Sweet and Scorched Creations Demo
+# Ember & Sugar Dessert Concept
 
-Static one-page website built from the Facebook page:
+Fictional dessert pop-up template for showing product drops, party packs, event tables, and a
+social-first ordering path.
 
-https://www.facebook.com/people/Shelbys-Sweet-and-Scorched-Creations/61590046095511/
-
-## Source Details Used
-
-- Business name: Shelby's Sweet and Scorched Creations
-- Location: Hillsboro, OH 45133
-- Category: Crafts
-- Intro copy from Facebook: "Welcome to Shelby's sweet and scorched creations!"
-- Public page count shown during research: 128 likes / 128 followers
-- Recent post theme: racing, fireworks, and grab-and-go sweet menu items
-- Product/gallery imagery exported from the Facebook page in the logged-in Chrome session
-
-Open `index.html` directly in a browser to view the site.
+The name, menu, location, links, and AI-generated food photography are portfolio placeholders.
+No real business details or customer media are used. Open `index.html` directly to review it.

@@ -1,0 +1,16 @@
+{
+  "live": [
+    { "name": "Malita's Place", "path": "vintage-boutique-shop-demo/", "category": "Boutique retail" },
+    { "name": "Adventure Cove", "path": "adventure-cove-upgrade-demo/", "category": "Family entertainment" },
+    { "name": "Wilson's Custom Creations", "url": "https://wilsonscustomcreations.com/", "category": "Custom fabrication" },
+    { "name": "Cupful of Grace Coffee", "path": "cupful-of-grace-coffee-demo/", "category": "Mobile food and beverage" }
+  ],
+  "concepts": [
+    { "name": "Local Signal", "path": "tri-state-news-weather-demo/", "category": "Local news" },
+    { "name": "Northline Exterior", "path": "curry-construction-demo/", "category": "Contractor" },
+    { "name": "Ember & Sugar", "path": "shelbys-sweet-scorched-demo/", "category": "Dessert pop-up" },
+    { "name": "Olive & Hearth", "path": "mediterranean-refresh-demo/", "category": "Restaurant" },
+    { "name": "Custom Apparel Studio", "path": "custom-apparel-template-demo/", "category": "Apparel retail" },
+    { "name": "Barber Booking Studio", "path": "barber-shop-template-demo/", "category": "Barber services" }
+  ]
+}

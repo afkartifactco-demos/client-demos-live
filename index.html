@@ -3,207 +3,54 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Client Demo Hub</title>
-    <meta name="description" content="Live client website demos hosted for review." />
+    <title>AFK Artifact Website Portfolio</title>
+    <meta name="description" content="Live client websites and configurable website concepts by AFK Artifact Co." />
     <link rel="icon" href="favicon.svg" />
     <style>
-      :root {
-        --ink: #191714;
-        --muted: #6d665d;
-        --paper: #f7f1e8;
-        --panel: #fffaf2;
-        --line: #dfd4c3;
-        --accent: #2f6f61;
-        --gold: #b97538;
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-
-      body {
-        margin: 0;
-        background: var(--paper);
-        color: var(--ink);
-        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      }
-
-      main {
-        width: min(1160px, calc(100% - 32px));
-        margin: 0 auto;
-        padding: 56px 0;
-      }
-
-      header {
-        display: grid;
-        gap: 16px;
-        margin-bottom: 34px;
-      }
-
-      .eyebrow {
-        margin: 0;
-        color: var(--gold);
-        font-size: 12px;
-        font-weight: 800;
-        letter-spacing: 0;
-        text-transform: uppercase;
-      }
-
-      h1 {
-        max-width: 760px;
-        margin: 0;
-        font-family: Georgia, "Times New Roman", serif;
-        font-size: clamp(42px, 8vw, 86px);
-        line-height: 0.98;
-      }
-
-      header p {
-        max-width: 680px;
-        margin: 0;
-        color: var(--muted);
-        font-size: 18px;
-        line-height: 1.65;
-      }
-
-      .grid {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 14px;
-      }
-
-      a.card {
-        display: grid;
-        min-height: 190px;
-        padding: 22px;
-        align-content: space-between;
-        background: var(--panel);
-        border: 1px solid var(--line);
-        border-radius: 8px;
-        color: inherit;
-        text-decoration: none;
-        transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
-      }
-
-      a.card:hover {
-        transform: translateY(-3px);
-        border-color: rgba(47, 111, 97, 0.45);
-        box-shadow: 0 18px 48px rgba(25, 23, 20, 0.12);
-      }
-
-      .card strong {
-        display: block;
-        margin-bottom: 10px;
-        font-size: 22px;
-      }
-
-      .card span {
-        color: var(--muted);
-        line-height: 1.5;
-      }
-
-      .card small {
-        color: var(--accent);
-        font-weight: 800;
-      }
-
-      footer {
-        margin-top: 30px;
-        color: var(--muted);
-        font-size: 13px;
-      }
-
-      @media (max-width: 840px) {
-        .grid {
-          grid-template-columns: 1fr;
-        }
-      }
+      :root{--ink:#11151c;--muted:#596170;--paper:#f5f7fa;--panel:#fff;--line:#dce1e8;--live:#087f5b;--concept:#5f3dc4}
+      *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
+      main{width:min(1160px,calc(100% - 32px));margin:auto;padding:48px 0 56px}header{max-width:760px;margin-bottom:42px}
+      .eyebrow,.section-label,.card small{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:0}
+      .eyebrow{color:var(--concept);margin:0 0 10px}h1{margin:0;font-size:clamp(38px,7vw,72px);line-height:1}header>p:last-child{color:var(--muted);font-size:18px;line-height:1.65;margin:18px 0 0}
+      section+section{margin-top:46px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:16px}.section-head h2{margin:3px 0 0;font-size:26px}.section-head p{margin:0;color:var(--muted);max-width:560px}.section-label.live{color:var(--live)}.section-label.concept{color:var(--concept)}
+      .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.grid.live-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+      .card{display:grid;min-height:210px;padding:22px;align-content:space-between;background:var(--panel);border:1px solid var(--line);border-radius:8px;color:inherit;text-decoration:none;transition:transform 160ms ease,border-color 160ms ease,box-shadow 160ms ease}
+      .card:hover{transform:translateY(-3px);border-color:#9ea8b7;box-shadow:0 16px 40px rgba(17,21,28,.1)}.card strong{display:block;margin:10px 0;font-size:21px}.card span{color:var(--muted);line-height:1.5}.card small{color:var(--concept)}.live-grid .card small{color:var(--live)}
+      footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:13px;line-height:1.6}
+      @media(max-width:960px){.grid.live-grid,.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:620px){main{padding-top:32px}.grid.live-grid,.grid{grid-template-columns:1fr}.section-head{display:block}.section-head p{margin-top:8px}}
     </style>
   </head>
   <body>
     <main>
       <header>
-        <p class="eyebrow">Client previews</p>
-        <h1>Live Demo Hub</h1>
-        <p>
-          Review links for current client website demos. Each demo opens as a standalone static site,
-          ready for phone, tablet, and desktop checks.
-        </p>
+        <p class="eyebrow">AFK Artifact Co.</p>
+        <h1>Website portfolio</h1>
+        <p>Production client launches alongside fictional, configurable concepts that show what a new business site could become.</p>
       </header>
 
-      <section class="grid" aria-label="Available demos">
-        <a class="card" href="tri-state-news-weather-demo/">
-          <div>
-            <strong>Tri-State News &amp; Weather</strong>
-            <span>Community-first Ohio weather and news bulletin with live-style alerts, closings, local openings, family coverage, search, filters, and AdSense-ready placements.</span>
-          </div>
-          <small>Open demo</small>
-        </a>
-        <a class="card" href="cupful-of-grace-coffee-demo/">
-          <div>
-            <strong>Cupful of Grace Coffee</strong>
-            <span>Full mobile coffee trailer site with order requests, signature menu, flavor builder, schedule, event booking, FAQ, and merch waitlist.</span>
-          </div>
-          <small>Open site</small>
-        </a>
-        <a class="card" href="wilsons-custom-creations-demo/">
-          <div>
-            <strong>Wilson's Custom Creations</strong>
-            <span>Online ordering platform for custom signs, hats, patches, ornaments, pendants, and event pieces.</span>
-          </div>
-          <small>Open demo</small>
-        </a>
-        <a class="card" href="custom-apparel-template-demo/">
-          <div>
-            <strong>Custom Apparel Template</strong>
-            <span>Reusable apparel, DTF, embroidery, vinyl, teamwear, and gift shop template with order and quote summary flows.</span>
-          </div>
-          <small>Open demo</small>
-        </a>
-        <a class="card" href="shelbys-sweet-scorched-demo/">
-          <div>
-            <strong>Shelby's Sweet &amp; Scorched</strong>
-            <span>Bright dessert brand site with product cards, event table visuals, and social ordering CTA.</span>
-          </div>
-          <small>Open demo</small>
-        </a>
-        <a class="card" href="barber-shop-template-demo/">
-          <div>
-            <strong>Barber Shop Template</strong>
-            <span>Reusable barber site template with services, booking, location CTA, staff login, and client cut notes.</span>
-          </div>
-          <small>Open demo</small>
-        </a>
-        <a class="card" href="curry-construction-demo/">
-          <div>
-            <strong>Curry Construction</strong>
-            <span>Metal roofing and exterior construction site with project gallery and estimate flow.</span>
-          </div>
-          <small>Open demo</small>
-        </a>
-        <a class="card" href="adventure-cove-upgrade-demo/">
-          <div>
-            <strong>Adventure Cove</strong>
-            <span>Mini golf site refresh with scorecard app, pricing, parties, and gallery sections.</span>
-          </div>
-          <small>Open demo</small>
-        </a>
-        <a class="card" href="mediterranean-refresh-demo/">
-          <div>
-            <strong>The Mediterranean</strong>
-            <span>Restaurant refresh concept with menu highlights, call-to-order, and visit details.</span>
-          </div>
-          <small>Open demo</small>
-        </a>
-        <a class="card" href="vintage-boutique-shop-demo/">
-          <div>
-            <strong>Vintage Boutique Shop</strong>
-            <span>Small retail demo with product browsing and cart-style shopping interactions.</span>
-          </div>
-          <small>Open demo</small>
-        </a>
+      <section aria-labelledby="live-title">
+        <div class="section-head"><div><span class="section-label live">Live client work</span><h2 id="live-title">Built for real businesses</h2></div><p>Approved client work, presented with direct links to the current hosted experience.</p></div>
+        <div class="grid live-grid">
+          <a class="card" href="vintage-boutique-shop-demo/"><div><small>Live build</small><strong>Malita's Place</strong><span>Boutique retail experience with browsable products and shopping interactions.</span></div><small>Visit site</small></a>
+          <a class="card" href="adventure-cove-upgrade-demo/"><div><small>Live build</small><strong>Adventure Cove</strong><span>Mini golf experience with pricing, parties, gallery, and digital scorecard.</span></div><small>Visit site</small></a>
+          <a class="card" href="https://wilsonscustomcreations.com/" target="_blank" rel="noreferrer"><div><small>Live website</small><strong>Wilson's Custom Creations</strong><span>Ordering platform for custom signs, patches, ornaments, hats, and event pieces.</span></div><small>Visit live site</small></a>
+          <a class="card" href="cupful-of-grace-coffee-demo/"><div><small>Live build</small><strong>Cupful of Grace Coffee</strong><span>Mobile coffee trailer site with menu, flavor builder, schedule, booking, and merch.</span></div><small>Visit site</small></a>
+        </div>
       </section>
 
-      <footer>Static demo hub. No client data is collected from this page.</footer>
+      <section aria-labelledby="concept-title">
+        <div class="section-head"><div><span class="section-label concept">Concept templates</span><h2 id="concept-title">Starting points, ready to tailor</h2></div><p>Fictional names, sample content, and draft workflows created to make planning a custom build easier.</p></div>
+        <div class="grid">
+          <a class="card" href="tri-state-news-weather-demo/"><div><small>News concept</small><strong>Local Signal</strong><span>Community news, weather alerts, closings, search, filters, and sponsor placements.</span></div><small>Explore concept</small></a>
+          <a class="card" href="curry-construction-demo/"><div><small>Contractor concept</small><strong>Northline Exterior</strong><span>Exterior services, project gallery, filtering, and an estimate intake flow.</span></div><small>Explore concept</small></a>
+          <a class="card" href="shelbys-sweet-scorched-demo/"><div><small>Food concept</small><strong>Ember &amp; Sugar</strong><span>Dessert products, event presentation, party packs, and ordering prompts.</span></div><small>Explore concept</small></a>
+          <a class="card" href="mediterranean-refresh-demo/"><div><small>Restaurant concept</small><strong>Olive &amp; Hearth</strong><span>Menu highlights, ordering calls to action, location details, and rich food imagery.</span></div><small>Explore concept</small></a>
+          <a class="card" href="custom-apparel-template-demo/"><div><small>Retail concept</small><strong>Custom Apparel Studio</strong><span>DTF, embroidery, vinyl, teamwear, gifts, and quote-summary workflows.</span></div><small>Explore concept</small></a>
+          <a class="card" href="barber-shop-template-demo/"><div><small>Service concept</small><strong>Barber Booking Studio</strong><span>Services, booking, location, staff access, and client cut notes.</span></div><small>Explore concept</small></a>
+        </div>
+      </section>
+
+      <footer>Concept templates are fictional portfolio demonstrations. Live client links are labeled separately and retain their approved identities.</footer>
     </main>
   </body>
 </html>

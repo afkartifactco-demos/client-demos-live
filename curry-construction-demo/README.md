@@ -1,17 +1,14 @@
-# Curry Construction Services LLC
+# Northline Exterior Concept
 
-Static website concept built from supplied Facebook screenshots and project photos.
+Fictional contractor website template for demonstrating a practical exterior-services site.
 
-## Open
+## What It Shows
 
-Open `index.html` directly in a browser.
+- Service positioning for roofing, siding, soffit, fascia, and exterior work
+- Filterable sample project gallery and lightbox
+- Estimate intake form with a non-submitting concept confirmation
+- Responsive contact and service-area sections
+- AI-generated concept photography with no client branding or location identifiers
 
-## Included
-
-- Responsive one-page contractor website
-- Cropped project-photo assets
-- Expanded portfolio gallery using full-size Facebook gallery photos in `assets/portfolio-full`
-- Raw Facebook gallery downloads kept in `assets/facebook-gallery-full`
-- Project gallery filters and lightbox preview
-- Estimate form that opens a prefilled email to `jlc_construction@yahoo.com`
-- Contact section using the Facebook profile details: Hillsboro, OH and `937-403-1786`
+All names, project details, contact information, and imagery are placeholders. Open `index.html`
+directly or deploy the folder as a static concept preview.
