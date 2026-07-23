@@ -11,7 +11,6 @@ Static Cloudflare Pages deployment containing approved client launches and ficti
 
 ## Concept templates
 
-- Local Signal News Template
 - Northline Exterior Concept
 - Ember & Sugar Dessert Concept
 - Olive & Hearth Restaurant Concept
