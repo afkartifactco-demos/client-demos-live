@@ -1,31 +1,44 @@
+const config = {
+  brandName: "Custom Apparel Co.",
+  contactEmail: "hello@example.com",
+  shippingFee: 6,
+  prices: {
+    "Basic tee": 20,
+    "Premium tee": 25,
+    Hoodie: 38,
+    Crewneck: 34,
+    "Long sleeve tee": 28,
+  },
+};
+
 const products = [
   {
-    label: "Weekly drops",
+    label: "Everyday",
     name: "Graphic tees",
     price: "$20+",
-    image: "assets/product-01.jpg",
-    text: "Ready-to-order designs, seasonal drops, and custom sayings for adults and youth.",
+    swatch: "#61cbd1",
+    text: "Seasonal drops, business logos, family shirts, and custom sayings.",
   },
   {
-    label: "Comfort Colors",
-    name: "Premium cotton tees",
-    price: "$25",
-    image: "assets/product-04.jpg",
-    text: "Preshrunk cotton blanks with bright prints and laid-back boutique color options.",
+    label: "Premium",
+    name: "Boutique blanks",
+    price: "$25+",
+    swatch: "#e84f7f",
+    text: "Comfort-style cotton, garment-dyed colors, and softer retail-ready pieces.",
   },
   {
-    label: "Rush capable",
-    name: "Event shirts",
+    label: "Groups",
+    name: "Teams and events",
     price: "Quote",
-    image: "assets/product-08.jpg",
-    text: "School, team, family, and last-minute event apparel with clear deadline handling.",
+    swatch: "#6f55ba",
+    text: "Schools, tournaments, reunions, fundraisers, staff shirts, and rush jobs.",
   },
   {
-    label: "Business growth",
-    name: "Workwear and promos",
+    label: "Business",
+    name: "Workwear and signs",
     price: "Bulk quote",
-    image: "assets/product-09.jpg",
-    text: "Polos, tees, jerseys, vinyl signage, and window graphics for local brands.",
+    swatch: "#f5bf3f",
+    text: "Polos, uniforms, decals, vinyl signs, window graphics, and promo gear.",
   },
 ];
 
@@ -44,12 +57,26 @@ function showToast(message) {
   window.setTimeout(() => toast.classList.remove("show"), 2200);
 }
 
+function renderBrand() {
+  document.querySelectorAll("[data-brand-name]").forEach((node) => {
+    node.textContent = config.brandName;
+  });
+  document.querySelectorAll('a[href^="mailto:"]').forEach((link) => {
+    link.href = `mailto:${config.contactEmail}`;
+    if (link.textContent.includes("@")) {
+      link.textContent = config.contactEmail;
+    }
+  });
+}
+
 function renderProducts() {
   productGrid.innerHTML = products
     .map(
       (product) => `
         <article class="product-card">
-          <img src="${product.image}" alt="${product.name}" />
+          <div class="product-visual" style="--swatch: ${product.swatch}">
+            <span class="shirt-icon" aria-hidden="true"></span>
+          </div>
           <div>
             <small>${product.label} | ${product.price}</small>
             <h3>${product.name}</h3>
@@ -77,17 +104,17 @@ orderForm.addEventListener("submit", (event) => {
   const quantity = Number(formValue(data, "quantity") || "1");
   const style = formValue(data, "style");
   const fulfillment = formValue(data, "fulfillment");
-  const basePrice = style === "Comfort Colors tee" ? 25 : style === "Regular 50/50 tee" ? 20 : 0;
-  const shipping = fulfillment.includes("Ship") ? 6 : 0;
+  const basePrice = config.prices[style] || 0;
+  const shipping = fulfillment.includes("Ship") ? config.shippingFee : 0;
   const estimated = basePrice ? `$${basePrice * quantity + shipping}` : "Needs quote";
 
-  enableCopy(`Brewers Creative Designs shirt order
+  enableCopy(`${config.brandName} order request
 Name: ${formValue(data, "customerName")}
 Email: ${formValue(data, "email")}
 Phone: ${formValue(data, "phone")}
 
 Style: ${style}
-Size: ${formValue(data, "size")}
+Size or size run: ${formValue(data, "size")}
 Color: ${formValue(data, "color")}
 Quantity: ${quantity}
 Fulfillment: ${fulfillment}
@@ -96,7 +123,7 @@ Estimated starting total: ${estimated}
 Design notes:
 ${formValue(data, "notes")}
 
-Artwork reminder: email reference photo or image file to Brewerscreativedesigns@gmail.com`);
+Artwork reminder: send reference photos, logo files, and placement notes to ${config.contactEmail}`);
 
   showToast("Order summary ready");
 });
@@ -104,13 +131,13 @@ Artwork reminder: email reference photo or image file to Brewerscreativedesigns@
 quoteForm.addEventListener("submit", (event) => {
   event.preventDefault();
   const data = new FormData(quoteForm);
-  enableCopy(`Brewers Creative Designs bulk quote request
+  enableCopy(`${config.brandName} bulk quote request
 Organization: ${formValue(data, "organization")}
 Quantity: ${formValue(data, "quantity")}
 Need: ${formValue(data, "need")}
 Deadline: ${formValue(data, "deadline") || "Flexible"}
 
-Please confirm apparel options, artwork needs, pricing, and pickup or shipping details.`);
+Please confirm product options, artwork needs, pricing, turnaround, and pickup or shipping details.`);
   document.querySelector("#order").scrollIntoView({ behavior: "smooth", block: "start" });
   showToast("Quote request previewed");
 });
@@ -121,6 +148,7 @@ copyButton.addEventListener("click", async () => {
   showToast("Summary copied");
 });
 
+renderBrand();
 renderProducts();
 
 window.addEventListener("DOMContentLoaded", () => {

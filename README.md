@@ -10,7 +10,7 @@ to clients.
 
 - Tri-State News & Weather
 - Wilson's Custom Creations
-- Brewers Creative Designs
+- Custom Apparel Shop Template
 - Shelby's Sweet & Scorched
 - Barber Shop Template
 - Curry Construction

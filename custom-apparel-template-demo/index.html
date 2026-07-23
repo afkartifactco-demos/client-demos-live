@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Brewers Creative Designs | Greenfield, Ohio</title>
+    <title>Custom Apparel Shop Template</title>
     <meta
       name="description"
-      content="Custom shirts, gifts, vinyl signs, jerseys, DTF prints, and business apparel from Brewers Creative Designs in Greenfield, Ohio."
+      content="Reusable website template for custom apparel, DTF print, embroidery, vinyl, teamwear, and local gift shops."
     />
     <link rel="stylesheet" href="styles.css" />
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
@@ -14,11 +14,11 @@
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="#top" aria-label="Brewers Creative Designs home">
-        <img src="assets/brewers-logo.png" alt="" />
+      <a class="brand" href="#top" aria-label="Custom Apparel Template home">
+        <span class="brand-mark">CA</span>
         <span>
-          <strong>Brewers Creative Designs</strong>
-          <small>Greenfield, Ohio</small>
+          <strong data-brand-name>Custom Apparel Co.</strong>
+          <small>Template for local makers</small>
         </span>
       </a>
       <nav aria-label="Primary navigation">
@@ -36,41 +36,42 @@
     <main id="top">
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-media">
-          <img src="assets/hero-generated.png" alt="A row of colorful blank shirts for custom printing" />
+          <img src="assets/blank-shirt-row.png" alt="A row of colorful blank shirts ready for custom printing" />
           <div class="logo-card">
-            <img src="assets/brewers-logo.png" alt="Brewers Creative Designs logo" />
+            <span class="logo-placeholder">Your Logo</span>
+            <small>Swap in the client's mark</small>
           </div>
         </div>
         <div class="hero-copy">
-          <p class="eyebrow">Family owned custom apparel and gifts</p>
-          <h1 id="hero-title">Custom shirts that help Greenfield show up loud.</h1>
+          <p class="eyebrow">Custom apparel, gifts, and local business gear</p>
+          <h1 id="hero-title">A cleaner way to sell custom work.</h1>
           <p>
-            Brewers Creative Designs makes custom tees, Comfort Colors, hoodies, crewnecks,
-            long sleeves, jerseys, vinyl signs, window graphics, and business apparel with a
-            practical order flow customers can actually finish.
+            A reusable storefront for shirt makers, DTF print shops, embroidery studios,
+            vinyl sign makers, teamwear sellers, and personalized gift brands that need
+            a practical order flow before full ecommerce.
           </p>
           <div class="hero-actions">
             <a class="button primary" href="#order">
               <i data-lucide="shirt"></i>
-              <span>Build a shirt order</span>
+              <span>Build an order</span>
             </a>
             <a class="button secondary" href="#quote">
               <i data-lucide="clipboard-list"></i>
-              <span>Request bulk pricing</span>
+              <span>Request a quote</span>
             </a>
           </div>
           <dl class="proof-grid">
             <div>
-              <dt>2023</dt>
-              <dd>Small Business of the Year</dd>
+              <dt>Fast</dt>
+              <dd>Order requests without messy DMs</dd>
             </div>
             <div>
-              <dt>800</dt>
-              <dd>Shirts in one completed order</dd>
+              <dt>Bulk</dt>
+              <dd>Team and business quote path</dd>
             </div>
             <div>
-              <dt>2 weeks</dt>
-              <dd>Standard turnaround</dd>
+              <dt>Local</dt>
+              <dd>Pickup, shipping, and rush notes</dd>
             </div>
           </dl>
         </div>
@@ -79,18 +80,18 @@
       <section class="service-band" aria-label="Popular services">
         <article>
           <i data-lucide="shirt"></i>
-          <strong>Custom tees</strong>
-          <span>Regular 50/50 tees, Comfort Colors, youth sizes, onesies, and plus sizing.</span>
+          <strong>Custom apparel</strong>
+          <span>Tees, hoodies, crewnecks, long sleeves, polos, youth sizes, and plus sizing.</span>
         </article>
         <article>
           <i data-lucide="sparkles"></i>
-          <strong>DTF prints</strong>
-          <span>Bold transfers, weekly drops, rush options, and ready-to-press designs.</span>
+          <strong>Print services</strong>
+          <span>DTF transfers, screen print style work, embroidery, vinyl, and ready-to-press art.</span>
         </article>
         <article>
           <i data-lucide="badge-check"></i>
           <strong>Business gear</strong>
-          <span>Polos, shirts, signs, windows, team jerseys, and walking-billboard workwear.</span>
+          <span>Uniforms, teamwear, branded giveaways, signs, decals, windows, and event apparel.</span>
         </article>
       </section>
 
@@ -99,8 +100,8 @@
           <p class="eyebrow">Order starters</p>
           <h2 id="shop-title">Start with the item, then personalize the idea.</h2>
           <p>
-            The demo keeps the current Google Form logic, but turns it into a clearer shopping
-            experience with styles, sizes, color notes, shipping, and image instructions in one place.
+            Swap the pricing, categories, and images for the client. The structure works
+            well for sellers who need details before taking payment.
           </p>
         </div>
         <div class="product-grid" data-products></div>
@@ -109,15 +110,15 @@
       <section class="quote-section" id="quote" aria-labelledby="quote-title">
         <div class="quote-copy">
           <p class="eyebrow">Bulk and business orders</p>
-          <h2 id="quote-title">A quote path for teams, schools, and local businesses.</h2>
+          <h2 id="quote-title">A quote path for teams, schools, events, and employers.</h2>
           <p>
-            Bulk orders should not squeeze through a one-shirt form. This section gives bigger
-            jobs a cleaner path for quantities, deadlines, apparel types, and artwork needs.
+            Bigger jobs need different questions than one-off shirts. This flow captures
+            quantity, category, deadline, and fulfillment without forcing a full cart.
           </p>
           <div class="quote-points">
-            <span><i data-lucide="building-2"></i> Business shirts</span>
-            <span><i data-lucide="trophy"></i> Jerseys and teams</span>
-            <span><i data-lucide="store"></i> Signs and windows</span>
+            <span><i data-lucide="building-2"></i> Business apparel</span>
+            <span><i data-lucide="trophy"></i> Teamwear</span>
+            <span><i data-lucide="store"></i> Signs and decals</span>
             <span><i data-lucide="timer"></i> Rush requests</span>
           </div>
         </div>
@@ -128,7 +129,7 @@
           </label>
           <label>
             Quantity
-            <input name="quantity" type="number" min="12" value="24" required />
+            <input name="quantity" type="number" min="1" value="24" required />
           </label>
           <label>
             What do you need?
@@ -137,7 +138,7 @@
               <option>Team jerseys</option>
               <option>Event apparel</option>
               <option>Vinyl sign or window graphic</option>
-              <option>DTF prints only</option>
+              <option>Transfers or prints only</option>
             </select>
           </label>
           <label>
@@ -153,26 +154,26 @@
 
       <section class="gallery-section" id="gallery" aria-labelledby="gallery-title">
         <div class="section-heading">
-          <p class="eyebrow">Recent work</p>
-          <h2 id="gallery-title">Color, personality, and small-town speed.</h2>
+          <p class="eyebrow">Gallery framework</p>
+          <h2 id="gallery-title">Replace these with real customer work.</h2>
         </div>
-        <div class="gallery-grid">
-          <img class="wide" src="assets/product-02.jpg" alt="A custom graphic shirt shown front and back" />
-          <img src="assets/product-04.jpg" alt="A bright summer vibes shirt" />
-          <img src="assets/product-05.jpg" alt="A Strong Women graphic shirt" />
-          <img src="assets/product-08.jpg" alt="A Tigers custom shirt on a display form" />
-          <img class="wide" src="assets/product-10.jpg" alt="A pink custom initial shirt" />
+        <div class="gallery-grid" aria-label="Template gallery placeholders">
+          <article class="mockup tall coral"><span>Team Shirt</span></article>
+          <article class="mockup aqua"><span>Logo Tee</span></article>
+          <article class="mockup violet"><span>Event Drop</span></article>
+          <article class="mockup sun"><span>Business Polo</span></article>
+          <article class="mockup wide ink"><span>Bulk Order Wall</span></article>
         </div>
       </section>
 
       <section class="order-section" id="order" aria-labelledby="order-title">
         <div class="order-panel">
           <div class="panel-heading">
-            <p class="eyebrow">Custom shirt order</p>
-            <h2 id="order-title">Build a ready-to-send request.</h2>
+            <p class="eyebrow">Custom order request</p>
+            <h2 id="order-title">Build a ready-to-send summary.</h2>
             <p>
-              Regular tees start at $20 for standard sizing and $22 for plus sizing.
-              Comfort Colors are $25 any size. Shipping is a flat $6.
+              Adjust base pricing in `script.js`. This demo estimates simple apparel
+              requests and flags custom categories for manual quote.
             </p>
           </div>
           <form class="order-form" data-order-form>
@@ -187,21 +188,21 @@
               </label>
               <label>
                 Phone
-                <input name="phone" type="tel" placeholder="For pickup and invoice info" required />
+                <input name="phone" type="tel" placeholder="Best number for questions" required />
               </label>
               <label>
-                Shirt size
-                <input name="size" type="text" placeholder="Youth M, Adult XL, 3XL, onesie..." required />
+                Size or size run
+                <input name="size" type="text" placeholder="Adult XL, youth M, 12 S / 12 M..." required />
               </label>
               <label>
-                Shirt color
-                <input name="color" type="text" placeholder="Color chart choice or preferred color" required />
+                Garment color
+                <input name="color" type="text" placeholder="Black, aqua, white, assorted..." required />
               </label>
               <label>
                 Style
                 <select name="style">
-                  <option>Regular 50/50 tee</option>
-                  <option>Comfort Colors tee</option>
+                  <option>Basic tee</option>
+                  <option>Premium tee</option>
                   <option>Hoodie</option>
                   <option>Crewneck</option>
                   <option>Long sleeve tee</option>
@@ -212,7 +213,8 @@
                 Fulfillment
                 <select name="fulfillment">
                   <option>Local pickup</option>
-                  <option>Ship to me - add $6 flat rate</option>
+                  <option>Ship to me</option>
+                  <option>Delivery or event dropoff</option>
                 </select>
               </label>
               <label>
@@ -225,7 +227,7 @@
               <textarea
                 name="notes"
                 rows="5"
-                placeholder="Describe the image, wording, colors, occasion, and any reference photo you will email."
+                placeholder="Describe artwork, placement, colors, occasion, deadline, and reference photos."
                 required
               ></textarea>
             </label>
@@ -234,7 +236,7 @@
                 <i data-lucide="file-text"></i>
                 <span>Preview order summary</span>
               </button>
-              <a class="button secondary" href="mailto:Brewerscreativedesigns@gmail.com">
+              <a class="button secondary" href="mailto:hello@example.com">
                 <i data-lucide="image-up"></i>
                 <span>Email artwork</span>
               </a>
@@ -253,9 +255,9 @@
     </main>
 
     <footer>
-      <span>Brewers Creative Designs</span>
-      <span>412 Pine Street, Greenfield, OH | 614-204-2312</span>
-      <a href="https://www.facebook.com/brewers.creativedesigns" target="_blank" rel="noreferrer">Facebook</a>
+      <span data-brand-name>Custom Apparel Co.</span>
+      <span>Local pickup | Shipping | Bulk quote support</span>
+      <a href="mailto:hello@example.com">hello@example.com</a>
     </footer>
 
     <div class="toast" data-toast role="status" aria-live="polite"></div>
