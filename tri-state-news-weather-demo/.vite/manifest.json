@@ -10,29 +10,38 @@
     "file": "assets/rolldown-runtime-S-ySWqyJ.js",
     "name": "rolldown-runtime"
   },
+  "_supabase-BcRFYEds.js": {
+    "file": "assets/supabase-BcRFYEds.js",
+    "name": "supabase",
+    "imports": [
+      "virtual:vinext-app-browser-entry"
+    ]
+  },
   "app/page.tsx": {
-    "file": "assets/page-K7A4jk_0.js",
+    "file": "assets/page-C57rdOxd.js",
     "name": "page",
     "src": "app/page.tsx",
     "isDynamicEntry": true,
     "imports": [
       "_rolldown-runtime-S-ySWqyJ.js",
+      "_supabase-BcRFYEds.js",
       "_framework-DjPHiq1u.js"
     ]
   },
   "app/publisher/page.tsx": {
-    "file": "assets/page-Bu_3arLV.js",
+    "file": "assets/page-C12Rg27C.js",
     "name": "page",
     "src": "app/publisher/page.tsx",
     "isDynamicEntry": true,
     "imports": [
       "_rolldown-runtime-S-ySWqyJ.js",
+      "_supabase-BcRFYEds.js",
       "_framework-DjPHiq1u.js",
       "node_modules/vinext/dist/shims/link.js"
     ]
   },
   "node_modules/vinext/dist/shims/layout-segment-context.js": {
-    "file": "assets/layout-segment-context-CMrd8BUc.js",
+    "file": "assets/layout-segment-context-CfYBmc0Z.js",
     "name": "layout-segment-context",
     "src": "node_modules/vinext/dist/shims/layout-segment-context.js",
     "isDynamicEntry": true,
@@ -43,7 +52,7 @@
     ]
   },
   "node_modules/vinext/dist/shims/link.js": {
-    "file": "assets/link-D5-OwSpp.js",
+    "file": "assets/link-YoQHfoxJ.js",
     "name": "link",
     "src": "node_modules/vinext/dist/shims/link.js",
     "isDynamicEntry": true,
@@ -57,7 +66,7 @@
     ]
   },
   "node_modules/vinext/dist/shims/router.js": {
-    "file": "assets/router-B7bKbJoX.js",
+    "file": "assets/router-Bny4wiUh.js",
     "name": "router",
     "src": "node_modules/vinext/dist/shims/router.js",
     "isDynamicEntry": true,
@@ -72,7 +81,7 @@
     ]
   },
   "virtual:vinext-app-browser-entry": {
-    "file": "assets/index-BbwlzlUe.js",
+    "file": "assets/index-DuyYPRP4.js",
     "name": "index",
     "src": "virtual:vinext-app-browser-entry",
     "isEntry": true,
